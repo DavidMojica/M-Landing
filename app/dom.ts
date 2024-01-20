@@ -1,4 +1,7 @@
-function toggleMenu():void{
-    const menu:HTMLElement = document.querySelector('.md\\:flex');
-    menu.classList.toggle('hidden');
+const toggleLight: HTMLInputElement | null = document.getElementById('toggleLight') as HTMLInputElement;
+
+if (toggleLight) {
+    toggleLight.addEventListener('change', () => {
+        document.querySelector('html')?.classList.toggle('dark', toggleLight.checked);
+    });
 }
