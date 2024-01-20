@@ -1,0 +1,27 @@
+{
+  "name": "Landing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DavidMojicaDev/Mojicas-Landing.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DavidMojicaDev/Mojicas-Landing/issues"
+  },
+  "homepage": "https://github.com/DavidMojicaDev/Mojicas-Landing#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.4.1"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.5.1",
+    "typescript": "^5.3.3"
+  }
+}
