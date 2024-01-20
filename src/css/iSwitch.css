@@ -1,6 +1,6 @@
 .theme-switch {
-  --toggle-size: 20px;
-  /* the size is adjusted using font-size,
+  --toggle-size: 18px;
+  /* the size is ajusted using font-size,
      this is not transform scale,
      so you can choose any size */
   --container-width: 5.625em;
