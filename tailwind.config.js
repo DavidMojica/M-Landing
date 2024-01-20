@@ -14,12 +14,15 @@ module.exports = {
       },
       height:{
         extra: '110%',
+        
       },
       width:{
-        extra: '110%'
+        extra: '110%',
+
+        
       },
       spacing:{
-        mini: '5%',
+        mini: '12%',
       }
     },
   },

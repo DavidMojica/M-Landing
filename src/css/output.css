@@ -560,12 +560,8 @@ video {
   inset: 0px;
 }
 
-.-left-mini {
-  left: -5%;
-}
-
 .-top-mini {
-  top: -5%;
+  top: -12%;
 }
 
 .left-0 {
@@ -644,10 +640,6 @@ video {
   height: 50px;
 }
 
-.h-extra {
-  height: 110%;
-}
-
 .min-h-\[1em\] {
   min-height: 1em;
 }
@@ -668,20 +660,8 @@ video {
   width: 1.25rem;
 }
 
-.w-extra {
-  width: 110%;
-}
-
 .w-full {
   width: 100%;
-}
-
-.w-px {
-  width: 1px;
-}
-
-.w-96 {
-  width: 24rem;
 }
 
 .origin-top-left {
@@ -794,9 +774,9 @@ video {
   background-size: 24px 24px;
 }
 
-.object-contain {
-  -o-object-fit: contain;
-     object-fit: contain;
+.object-cover {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .p-2 {
