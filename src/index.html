@@ -1,31 +1,50 @@
 <!DOCTYPE html>
-<html lang="en" class="">
+<html lang="en" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/output.css">
     <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+
+    <!-- Scripts -->
+    <script src="../build/bundle.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
     <title>Mojica Software</title>
 </head>
-<body class="dark:bg-slate-900 dark:text-dark-text w-4/5 mx-auto justify-center inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]">
+<body class="dark:bg-slate-900 dark:text-dark-text text-semidark bg-slate-200 w-4/5 mx-auto justify-center inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]">
     <header class="flex items-center justify-evenly mt-4">
         <a href="#">
             <div class="p-4">
                 <div class="flex flex-col items-center justify-center text-center">
-                    <span class="text-3xl text-purple-500 border-4 border-purple p-2 rounded-full dark:hover:bg-white"><i class="fa-solid fa-code"></i></span>
-                    <h1 class="text-5xl font-semibold dark:text-cyan-50 drop-shadow-white">David Mojíca</h1>
-                    <h2 class="text-2xl font-bold text-purple-500">Software Developer</h2>
+                    <span class="text-3xl text-blue-500 dark:text-purple-500 border-4 border-purple border-semidark bg-semidark  p-2 rounded-full"><i class="fa-solid fa-code"></i></span>
+                    <h1 class="text-3xl md:text-4xl lg:text-5xl xl:text-5xl font-semibold dark:text-cyan-50 ">David Mojíca</h1>
+                    <h2 class="text-base md:text-2xl lg:text-2xl xl:text-2xl font-bold text-blue-500 dark:text-purple-500 sm:text-sm">Software Developer</h2>
                 </div>
             </div>
         </a>
-        
-        <div class="flex">
+
+        <div class="md:flex hidden">
             <ul class="flex space-x-4 font-bold text-2xl">
-                <li><a href="#"><h2 class="text-purple-500">Inicio</h2></a></li>
+                <li><a href="#"><h2 class="text-blue-500 dark:text-purple-500">Inicio</h2></a></li>
                 <li><h2 class="">Servicios</h4></li>
                 <li><h2 class="">Demos</h4></li>
-                <li><h2 class="">Escribir</h4></li>
+                <li><h2 class="">Contacto</h4></li>
             </ul>
+        </div>
+
+        <!-- tests -->
+        <div x-data="{ open: false }" class="md:hidden relative inline-block text-left">
+            <button @click="open = !open" class="inline-flex justify-center w-full px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-gray-100 focus:ring-blue-500"> Menu 
+                <svg class="h-5 w-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+            </button>
+            <div x-show="open" @click.away="open = false" class="origin-top-left absolute left-0 mt-2  rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 px-2 py-2">
+              <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100 rounded-md text-blue-500 dark:text-purple-500">Inicio</a>
+              <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">Servicios</a>
+              <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">Demos</a>
+              <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">Contacto</a>
+            </div>
         </div>
     </header>
 </body>

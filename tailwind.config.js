@@ -8,10 +8,7 @@ module.exports = {
         dark: {
           text: '#fff'
         },
-        light:{
-          background: '#ffffff',
-          text: '#612a32'
-        }
+        semidark: '#333333'
       }
     },
   },
