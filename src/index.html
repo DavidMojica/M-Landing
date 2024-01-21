@@ -16,14 +16,12 @@
     <title>MS</title>
 </head>
 <body class="dark:bg-slate-900 dark:text-dark-text text-semidark bg-slate-200 w-4/5 mx-auto justify-center inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]">
-    <header class="sticky top-0 flex items-center justify-evenly mt-4">
+    <header class="sticky z-50 top-0 flex items-center justify-evenly mt-4 backdrop-blur-lg drop-shadow-lg rounded-3xl">
         <a href="#">
-            <div class="">
-                <div class="flex flex-col items-center justify-center text-center">
-                    <span class="text-3xl text-blue-500 dark:text-purple-500 border-4 border-semidark bg-semidark my-2 p-2 rounded-full"><i class="fa-solid fa-code"></i></span>
-                    <h1 class="text-3xl md:text-4xl lg:text-5xl xl:text-5xl font-semibold dark:text-cyan-50 hover:text-blue-500 dark:hover:text-purple-500">David Mojíca</h1>
-                    <h2 class="text-base md:text-2xl lg:text-2xl xl:text-2xl font-bold text-blue-500 dark:text-purple-500 sm:text-sm font-">Full Stack<br> Software Engineer</h2>
-                </div>
+            <div class="flex flex-col items-center justify-center text-center">
+                <span class="text-3xl text-blue-500 dark:text-purple-500 border-4 border-semidark bg-semidark my-2 p-2 rounded-full"><i class="fa-solid fa-code"></i></span>
+                <h1 class="text-3xl md:text-4xl lg:text-5xl xl:text-5xl font-semibold dark:text-cyan-50 hover:text-blue-500 dark:hover:text-purple-500">David Mojíca</h1>
+                <h2 class="text-base md:text-2xl lg:text-2xl xl:text-2xl font-bold text-blue-500 dark:text-purple-500 sm:text-sm font-">Full Stack<br> Software Engineer</h2>
             </div>
         </a>
 
@@ -84,15 +82,16 @@
                   <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100 rounded-md text-blue-500 dark:text-purple-500">Inicio</a>
                   <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">Servicios</a>
                   <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">Demos</a>
+                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">Cotizar</a>
                   <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">Contacto</a>
                 </div>
             </div>
         </div>
     </header>
 
-    <section class="mt-32 md:mt-28 lg:mt-20 xl:mt-12">
-        <div class="grid place-items-center ">
-            <div class="atropos a-night" id="a-night">
+    <section class="mt-28 md:mt-24 lg:mt-20 xl:mt-12">
+        <div class="grid place-items-center z-0">
+            <article class="atropos a-night " id="a-night">
                 <div class="atropos-scale">
                   <div class="atropos-rotate">
                       <div class="atropos-inner relative bg-gradient-to-b from-slate-900 via-purpleDark to-purpleDarkSecondary rounded-2xl text-center items-center">
@@ -100,16 +99,13 @@
                         <img src="../resources/night-moon.png" alt="moon" class="absolute object-cover mix-blend-screen" data-atropos-offset="-6.5">
                         <img src="../resources/night-mountains_behind.png" alt="mountains_behind" class="absolute object-cover" data-atropos-offset="-4">           
                         <img src="../resources/night-mountains_front.png" alt="mountains_front" class="absolute object-cover"  data-atropos-offset="0">
-                        <!-- <h1 class="text-3xl md:text-4xl lg:text-7xl xl:text-7xl font-semibold dark:text-cyan-50 hover:text-blue-500 dark:hover:text-purple-500 mt-48" data-atropos-offset="6" >David Mojíca</h1>
-                        <h2 class="text-base md:text-2xl lg:text-3xl xl:text-3xl font-bold text-blue-500 dark:text-purple-500 sm:text-sm" data-atropos-offset="6">Software Developer</h2> -->
-                        <!-- <a href="#" class=" border-purple-500 bg-purple-500 hover:bg-purple-700 hover:opacity-20  text-center rounded-xl relative bottom-4 ">Descubre más</a> -->
                         <a href="" class="bg-purple-700 text-white rounded-full px-4 py-2 md:px-8 md:py-4 font-bold md:text-xl  hover:bg-opacity-70 duration-200 hidden md:inline-flex md:translate-y-64 lg:translate-y-72 xl:translate-y-96">Descubre más</a>
                     </div>
                   </div>
                 </div>
-            </div>
+            </article>
 
-            <div class="atropos a-day" id="a-day">
+            <article class="atropos a-day" id="a-day">
                 <div class="atropos-scale">
                     <div class="atropos-scale">
                         <div class="atropos-rotate">
@@ -120,17 +116,20 @@
                                 <img src="../resources/day-bird1.png" alt="bird1" class="absolute object-cover" data-atropos-offset="-5.5">
                                 <img src="../resources/day-rocks.png" alt="rocks" class="absolute object-cover w-extra" data-atropos-offset="1.5">
                                 <img src="../resources/day-water.png" alt="water"class="absolute object-cover">
-                                <a href="#" class="bg-green-700 text-white rounded-full px-4 py-2 md:px-8 md:py-4 font-bold md:text-xl  hover:bg-opacity-70 duration-200 hidden md:inline-flex md:translate-y-52 lg:translate-y-64 xl:translate-y-96">Descubre más</a>
+                                <a href="" class="bg-green-700 text-white rounded-full px-4 py-2 md:px-8 md:py-4 font-bold md:text-xl  hover:bg-opacity-70 duration-200 hidden md:inline-flex md:translate-y-60 lg:translate-y-72 xl:translate-y-96">Descubre más</a>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </article>
         </div>
-        <div class="grid place-content-center mt-20">
-            <a href="#" class="bg-green-700 dark:bg-purple-700 text-white rounded-full px-4 py-2 md:px-8 md:py-4 font-bold md:text-xl hover:bg-opacity-70 duration-200 inline-flex md:hidden">Descubre más</a>
+        <div class="grid place-content-center mt-28 ">
+            <a href="#" class="bg-blue-700 dark:bg-purple-700 text-white rounded-full px-4 py-2 md:px-8 md:py-4 font-bold md:text-xl hover:bg-opacity-70 duration-200 inline-flex md:hidden">Descubre más</a>
         </div>
+    </section>
 
+    <section class="">
+        
     </section>
 
 
