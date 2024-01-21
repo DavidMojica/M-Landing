@@ -8,7 +8,21 @@ module.exports = {
         dark: {
           text: '#fff'
         },
-        semidark: '#333333'
+        semidark: '#333333',
+        purpleDark: '#2b1055',
+        purpleDarkSecondary: '#7597de',
+      },
+      height:{
+        extra: '150%',
+        
+      },
+      width:{
+        extra: '130%',
+
+        
+      },
+      spacing:{
+        mini: '12%',
       }
     },
   },
