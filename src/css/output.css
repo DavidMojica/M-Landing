@@ -693,10 +693,6 @@ video {
   width: 100%;
 }
 
-.max-w-\[20ch\] {
-  max-width: 20ch;
-}
-
 .origin-left {
   transform-origin: left;
 }
@@ -1279,8 +1275,8 @@ video {
     line-height: 1;
   }
 
-  .lg\:text-6xl {
-    font-size: 3.75rem;
+  .lg\:text-8xl {
+    font-size: 6rem;
     line-height: 1;
   }
 }
@@ -1302,11 +1298,6 @@ video {
 
   .xl\:text-5xl {
     font-size: 3rem;
-    line-height: 1;
-  }
-
-  .xl\:text-7xl {
-    font-size: 4.5rem;
     line-height: 1;
   }
 }
