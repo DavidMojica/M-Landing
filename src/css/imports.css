@@ -1,5 +1,6 @@
 @import '../../node_modules/atropos/atropos.css';
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;400;600&display=swap');
+@import '../../node_modules/swiper/swiper-bundle.min.css';
 
 *{
     font-family: 'Josefin Sans', sans-serif;
