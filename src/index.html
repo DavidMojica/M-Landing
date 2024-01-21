@@ -13,7 +13,7 @@
     <script src="../build/bundle.js" defer></script>
     <script src="./js/src.js" defer type="module"></script>
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
-    <title>Mojica Software</title>
+    <title>MS</title>
 </head>
 <body class="dark:bg-slate-900 dark:text-dark-text text-semidark bg-slate-200 w-4/5 mx-auto justify-center inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]">
     <header class="sticky top-0 flex items-center justify-evenly mt-4">
@@ -63,7 +63,15 @@
                 <!-- Barra vertical -->
                 <div class="inline-block h-[50px] min-h-[1em] w-0.5 self-stretch bg-neutral-100 opacity-100 dark:opacity-50 mx-5"></div>
                 <!-- Enlace a github -->
-                <a href=""><i class="fab fa-github text-5xl text-blue-800 hover:text-blue-900 dark:text-white dark:hover:text-purple-900"></i></a>
+                <a href="">
+                    <div class="group relative">
+                        <button>
+                            <svg stroke-linejoin="round" stroke-linecap="round" stroke-width="2" stroke="currentColor" fill="none" viewBox="0 0 24 24" class="w-8 hover:scale-125 duration-200 hover:stroke-blue-500"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                        </button>
+                        <span class="absolute -top-14 left-[50%] -translate-x-[50%] z-20 origin-left scale-0 px-3 rounded-lg border  border-gray-300 bg-white py-2 text-sm font-bold shadow-md transition-all duration-300 ease-in-out group-hover:scale-100 dark:text-black">GitHub
+                        </span>
+                    </div>
+                </a>
             </div>
             <!-- Menu para responsive -->
             <div x-data="{ open: false }" class="md:hidden relative block text-left mx-4">
@@ -87,14 +95,15 @@
             <div class="atropos a-night" id="a-night">
                 <div class="atropos-scale">
                   <div class="atropos-rotate">
-                      <div class="atropos-inner relative bg-gradient-to-br from-slate-900 to-purpleDarkSecondary rounded-2xl text-center">
+                      <div class="atropos-inner relative bg-gradient-to-br from-slate-900 to-purpleDarkSecondary rounded-2xl text-center items-center">
                         <img src="../resources/night-stars.png" alt="stars" class="absolute object-cover -top-mini" data-atropos-offset="-9.5">
                         <img src="../resources/night-moon.png" alt="moon" class="absolute object-cover mix-blend-screen" data-atropos-offset="-6.5">
                         <img src="../resources/night-mountains_behind.png" alt="mountains_behind" class="absolute object-cover" data-atropos-offset="-4">
                         <img src="../resources/night-mountains_front.png" alt="mountains_front" class="absolute object-cover"  data-atropos-offset="0">
                         <!-- <h1 class="text-3xl md:text-4xl lg:text-7xl xl:text-7xl font-semibold dark:text-cyan-50 hover:text-blue-500 dark:hover:text-purple-500 mt-48" data-atropos-offset="6" >David Mojíca</h1>
                         <h2 class="text-base md:text-2xl lg:text-3xl xl:text-3xl font-bold text-blue-500 dark:text-purple-500 sm:text-sm" data-atropos-offset="6">Software Developer</h2> -->
-                      </div>
+                        <a href="#" class=" border-purple-500 bg-purple-500 hover:bg-purple-700 hover:opacity-20  text-center rounded-xl relative bottom-4 ">Descubre más</a>
+                    </div>
                   </div>
                 </div>
             </div>
