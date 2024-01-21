@@ -15,8 +15,10 @@
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
     <title>MS</title>
 </head>
-<body class="dark:bg-slate-900 dark:text-dark-text text-semidark bg-slate-200 w-4/5 mx-auto justify-center inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]">
-    <header class="sticky z-50 top-0 flex items-center justify-evenly mt-4 backdrop-blur-lg drop-shadow-lg rounded-3xl">
+<body class="dark:bg-slate-900 dark:text-dark-text text-semidark bg-slate-200 h-screen bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]">
+    
+    <!-- 1st Section: Header, atropos y hidden -->
+    <header class="z-50 top-0 flex items-center justify-evenly w-4/5 mx-auto">
         <a href="#">
             <div class="flex flex-col items-center justify-center text-center">
                 <span class="text-3xl text-blue-500 dark:text-purple-500 border-4 border-semidark bg-semidark my-2 p-2 rounded-full"><i class="fa-solid fa-code"></i></span>
@@ -88,9 +90,9 @@
             </div>
         </div>
     </header>
+    <section class="">
 
-    <section class="mt-28 md:mt-24 lg:mt-20 xl:mt-12">
-        <div class="grid place-items-center z-0">
+        <section class="mt-20">
             <article class="atropos a-night " id="a-night">
                 <div class="atropos-scale">
                   <div class="atropos-rotate">
@@ -122,14 +124,15 @@
                     </div>
                 </div>
             </article>
-        </div>
+        </section>
         <div class="grid place-content-center mt-28 ">
             <a href="#" class="bg-blue-700 dark:bg-purple-700 text-white rounded-full px-4 py-2 md:px-8 md:py-4 font-bold md:text-xl hover:bg-opacity-70 duration-200 inline-flex md:hidden">Descubre más</a>
         </div>
     </section>
 
-    <section class="">
-        
+    <!-- 2nd Section: General Info -->
+    <section class="h-screen bg-blue-500 dark:bg-purpleDark inset-0 w-full bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_65%_50%_at_50%_50%,#000_80%,transparent_100%)]">
+
     </section>
 
 
