@@ -13,11 +13,11 @@ module.exports = {
         purpleDarkSecondary: '#7597de',
       },
       height:{
-        extra: '110%',
+        extra: '150%',
         
       },
       width:{
-        extra: '110%',
+        extra: '130%',
 
         
       },
