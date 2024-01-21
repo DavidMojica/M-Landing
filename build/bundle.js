@@ -4,8 +4,8 @@ const aDay = document.getElementById('a-day');
 const aNight = document.getElementById('a-night');
 //-----------------FUNCTIONS----------------//
 function aToggler() {
-    toggleLight.checked ? aNight.style.display = 'block' : aNight.style.display = 'none';
-    toggleLight.checked ? aDay.style.display = 'none' : aDay.style.display = 'block';
+    aNight.style.display = toggleLight.checked ? 'block' : 'none';
+    aDay.style.display = toggleLight.checked ? 'none' : 'block';
 }
 //-------------DOM MANGNAMENT--------------//
 if (toggleLight) {
