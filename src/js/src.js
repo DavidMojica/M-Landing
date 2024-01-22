@@ -66,35 +66,127 @@ var aLogo = Atropos({
     highlight: false,
     shadow: false
 });
+// db logos
+var aLogo = Atropos({
+    el: '.db-logo1',
+    activeOffset:0,
+    highlight: false,
+    shadow: false
+});
+var aLogo = Atropos({
+    el: '.db-logo2',
+    activeOffset:0,
+    highlight: false,
+    shadow: false
+});
+var aLogo = Atropos({
+    el: '.db-logo3',
+    activeOffset:0,
+    highlight: false,
+    shadow: false
+});
+var aLogo = Atropos({
+    el: '.db-logo4',
+    activeOffset:0,
+    highlight: false,
+    shadow: false
+});
+var aLogo = Atropos({
+    el: '.db-logo5',
+    activeOffset:0,
+    highlight: false,
+    shadow: false
+});
 
+// Tools
+var aLogo = Atropos({
+    el: '.tool-logo1',
+    activeOffset:0,
+    highlight: false,
+    shadow: false
+});
+var aLogo = Atropos({
+    el: '.tool-logo2',
+    activeOffset:0,
+    highlight: false,
+    shadow: false
+});
+var aLogo = Atropos({
+    el: '.tool-logo3',
+    activeOffset:0,
+    highlight: false,
+    shadow: false
+});
+var aLogo = Atropos({
+    el: '.tool-logo4',
+    activeOffset:0,
+    highlight: false,
+    shadow: false
+});
+var aLogo = Atropos({
+    el: '.tool-logo5',
+    activeOffset:0,
+    highlight: false,
+    shadow: false
+});
+var aLogo = Atropos({
+    el: '.tool-logo6',
+    activeOffset:0,
+    highlight: false,
+    shadow: false
+});
+var aLogo = Atropos({
+    el: '.tool-logo7',
+    activeOffset:0,
+    highlight: false,
+    shadow: false
+});
+var aLogo = Atropos({
+    el: '.tool-logo8',
+    activeOffset:0,
+    highlight: false,
+    shadow: false
+});
+var aLogo = Atropos({
+    el: '.tool-logo9',
+    activeOffset:0,
+    highlight: false,
+    shadow: false
+});
+var aLogo = Atropos({
+    el: '.tool-logo10',
+    activeOffset:0,
+    highlight: false,
+    shadow: false
+});
 
 //Swiper
 var swiper = new Swiper(".Swiper", {
     slidesPerView: 4,
-    spaceBetween: 30,
+    spaceBetween: 10,
     // freeMode: true,
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
     },
-    // autoplay:{
-    //     delay: 2000
-    // },
+    autoplay:{
+        delay: 3000
+    },
     loop: true,
 });
 
 var reverseSwiper = new Swiper(".revSw", {
     slidesPerView: 4,
-    spaceBetween: 30,
+    spaceBetween: 10,
     freeMode: true,
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
     },
-    // autoplay:{
-    //     delay: 2000,
-    //     reverseDirection: true,
-    // },
+    autoplay:{
+        delay: 3000,
+        reverseDirection: true,
+    },
     loop: true,
 });
 
