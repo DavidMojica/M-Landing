@@ -26,6 +26,7 @@
     "echarts": "^5.4.3",
     "simple-parallax-js": "^5.6.2",
     "swiper": "^11.0.5",
-    "typescript": "^5.3.3"
+    "typescript": "^5.3.3",
+    "vercel": "^33.2.0"
   }
 }
