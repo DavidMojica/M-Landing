@@ -12,20 +12,31 @@ const dayScene = Atropos({
     activeOffset: 100,
 });
 
+var aLogo = Atropos({
+    el: '.lang-logo1',
+    activeOffset:0,
+    highlight: false,
+});
+var aLogo = Atropos({
+    el: '.lang-logo2',
+    activeOffset:0,
+    highlight: false,
+});
+
+
 //Swiper
 var swiper = new Swiper(".Swiper", {
     slidesPerView: 4,
     spaceBetween: 30,
-    freeMode: true,
+    // freeMode: true,
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
     },
-    autoplay:{
-        delay: 2000
-    },
+    // autoplay:{
+    //     delay: 2000
+    // },
     loop: true,
-    parallax: true,
 });
 
 var reverseSwiper = new Swiper(".revSw", {
@@ -36,12 +47,11 @@ var reverseSwiper = new Swiper(".revSw", {
       el: ".swiper-pagination",
       clickable: true,
     },
-    autoplay:{
-        delay: 2000,
-        reverseDirection: true,
-    },
+    // autoplay:{
+    //     delay: 2000,
+    //     reverseDirection: true,
+    // },
     loop: true,
-    parallax: true,
 });
 
 
