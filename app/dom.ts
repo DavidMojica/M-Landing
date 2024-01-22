@@ -3,6 +3,8 @@ const toggleLight: HTMLInputElement | null = document.getElementById('toggleLigh
 const aDay: HTMLElement | null = document.getElementById('a-day');
 const aNight: HTMLElement | null = document.getElementById('a-night');
 
+
+
 //-----------------FUNCTIONS----------------//
 function aToggler():void{
     aNight.style.display = toggleLight.checked ? 'block' : 'none';

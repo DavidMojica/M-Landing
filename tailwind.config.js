@@ -23,6 +23,9 @@ module.exports = {
       },
       spacing:{
         mini: '12%',
+        med: '40%',
+        hg: '60%',
+        extra: '80%'
       }
     },
   },

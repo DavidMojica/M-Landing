@@ -16,11 +16,55 @@ var aLogo = Atropos({
     el: '.lang-logo1',
     activeOffset:0,
     highlight: false,
+    shadow: false
 });
 var aLogo = Atropos({
     el: '.lang-logo2',
     activeOffset:0,
     highlight: false,
+    shadow: false
+});
+var aLogo = Atropos({
+    el: '.lang-logo3',
+    activeOffset:0,
+    highlight: false,
+    shadow: false
+});
+var aLogo = Atropos({
+    el: '.lang-logo4',
+    activeOffset:0,
+    highlight: false,
+    shadow: false
+});
+var aLogo = Atropos({
+    el: '.lang-logo5',
+    activeOffset:0,
+    highlight: false,
+    shadow: false
+});
+var aLogo = Atropos({
+    el: '.lang-logo6',
+    activeOffset:0,
+    highlight: false,
+    shadow: false
+});
+var aLogo = Atropos({
+    el: '.lang-logo7',
+    activeOffset:0,
+    highlight: false,
+    shadow: false
+});
+var aLogo = Atropos({
+    el: '.lang-logo8',
+    activeOffset:0,
+    highlight: false,
+    shadow: false
+});
+var aLogo = Atropos({
+    el: '.lang-logo9',
+    activeOffset:0,
+    highlight: false,
+    shadow: false
 });
 
 
