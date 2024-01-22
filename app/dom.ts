@@ -3,10 +3,12 @@ const toggleLight: HTMLInputElement | null = document.getElementById('toggleLigh
 const aDay: HTMLElement | null = document.getElementById('a-day');
 const aNight: HTMLElement | null = document.getElementById('a-night');
 
+
+
 //-----------------FUNCTIONS----------------//
 function aToggler():void{
-    toggleLight.checked? aNight.style.display = 'block' : aNight.style.display = 'none';
-    toggleLight.checked? aDay.style.display = 'none' : aDay.style.display = 'block';
+    aNight.style.display = toggleLight.checked ? 'block' : 'none';
+    aDay.style.display = toggleLight.checked ? 'none' : 'block';
 }
 
 //-------------DOM MANGNAMENT--------------//

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es" class="dark">
+<html lang="es" class="dark scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,115 +15,412 @@
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
     <title>MS</title>
 </head>
-<body class="dark:bg-slate-900 dark:text-dark-text text-semidark bg-slate-200 w-4/5 mx-auto justify-center inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]">
-    <header class="sticky top-0 flex items-center justify-evenly mt-4">
-        <a href="#">
-            <div class="p-4">
+<body class="dark:bg-slate-900 dark:text-dark-text text-semidark bg-slate-200 h-screen bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]">
+    
+    <!-- 1st Section: Header, atropos y hidden -->
+    
+    <section class="border-b-2 border-blue-700 dark:border-purple-700 border-solid h-screen">
+        <header class="z-50 top-0 flex items-center justify-evenly w-4/5 mx-auto">
+            <a href="#">
                 <div class="flex flex-col items-center justify-center text-center">
-                    <span class="text-3xl text-blue-500 dark:text-purple-500 border-4 border-purple border-semidark bg-semidark  p-2 rounded-full"><i class="fa-solid fa-code"></i></span>
+                    <span class="text-3xl text-blue-500 dark:text-purple-500 border-4 border-semidark bg-semidark my-2 p-2 rounded-full grid place-items-center"><i class="fa-solid fa-code"></i></span>
                     <h1 class="text-3xl md:text-4xl lg:text-5xl xl:text-5xl font-semibold dark:text-cyan-50 hover:text-blue-500 dark:hover:text-purple-500">David Mojíca</h1>
-                    <h2 class="text-base md:text-2xl lg:text-2xl xl:text-2xl font-bold text-blue-500 dark:text-purple-500 sm:text-sm">Software Developer</h2>
+                    <h2 class="text-base md:text-2xl lg:text-2xl xl:text-2xl font-bold text-blue-500 dark:text-purple-500 sm:text-sm font-">Full Stack<br> Software Engineer</h2>
                 </div>
+            </a>
+    
+            <div class="md:flex hidden mx-4">
+                <ul class="flex space-x-4 font-bold text-2xl">
+                    <li><a href="#"><h2 class="text-blue-500 dark:text-purple-500">Inicio</h2></a></li>
+                    <li><a href="#"><h2 class="hover:text-blue-500 dark:hover:text-purple-500">Servicios</h4></a></li>
+                    <li><a href="#"><h2 class="hover:text-blue-500 dark:hover:text-purple-500">Demos</h4></a></li>
+                    <li><a href="#"><h2 class="hover:text-blue-500 dark:hover:text-purple-500">Cotizar</h4></a></li>
+                </ul>
             </div>
-        </a>
-
-        <div class="md:flex hidden">
-            <ul class="flex space-x-4 font-bold text-2xl">
-                <li><a href="#"><h2 class="text-blue-500 dark:text-purple-500">Inicio</h2></a></li>
-                <li><a href="#"><h2 class="hover:text-blue-500 dark:hover:text-purple-500">Servicios</h4></a></li>
-                <li><a href="#"><h2 class="hover:text-blue-500 dark:hover:text-purple-500">Demos</h4></a></li>
-                <li><a href="#"><h2 class="hover:text-blue-500 dark:hover:text-purple-500">Contacto</h4></a></li>
-            </ul>
-        </div>
-
-        <div>
-            <!-- Controles y enlaces -->
-            <div class="flex items-center justify-evenly my-4">
-                <!-- Control de cambio de tema -->
-                <label class="theme-switch">
-                    <input type="checkbox" class="theme-switch__checkbox" id="toggleLight" checked>
-                        <div class="theme-switch__container">
-                            <div class="theme-switch__clouds"></div>
-                            <div class="theme-switch__stars-container">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 55" fill="none">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M135.831 3.00688C135.055 3.85027 134.111 4.29946 133 4.35447C134.111 4.40947 135.055 4.85867 135.831 5.71123C136.607 6.55462 136.996 7.56303 136.996 8.72727C136.996 7.95722 137.172 7.25134 137.525 6.59129C137.886 5.93124 138.372 5.39954 138.98 5.00535C139.598 4.60199 140.268 4.39114 141 4.35447C139.88 4.2903 138.936 3.85027 138.16 3.00688C137.384 2.16348 136.996 1.16425 136.996 0C136.996 1.16425 136.607 2.16348 135.831 3.00688ZM31 23.3545C32.1114 23.2995 33.0551 22.8503 33.8313 22.0069C34.6075 21.1635 34.9956 20.1642 34.9956 19C34.9956 20.1642 35.3837 21.1635 36.1599 22.0069C36.9361 22.8503 37.8798 23.2903 39 23.3545C38.2679 23.3911 37.5976 23.602 36.9802 24.0053C36.3716 24.3995 35.8864 24.9312 35.5248 25.5913C35.172 26.2513 34.9956 26.9572 34.9956 27.7273C34.9956 26.563 34.6075 25.5546 33.8313 24.7112C33.0551 23.8587 32.1114 23.4095 31 23.3545ZM0 36.3545C1.11136 36.2995 2.05513 35.8503 2.83131 35.0069C3.6075 34.1635 3.99559 33.1642 3.99559 32C3.99559 33.1642 4.38368 34.1635 5.15987 35.0069C5.93605 35.8503 6.87982 36.2903 8 36.3545C7.26792 36.3911 6.59757 36.602 5.98015 37.0053C5.37155 37.3995 4.88644 37.9312 4.52481 38.5913C4.172 39.2513 3.99559 39.9572 3.99559 40.7273C3.99559 39.563 3.6075 38.5546 2.83131 37.7112C2.05513 36.8587 1.11136 36.4095 0 36.3545ZM56.8313 24.0069C56.0551 24.8503 55.1114 25.2995 54 25.3545C55.1114 25.4095 56.0551 25.8587 56.8313 26.7112C57.6075 27.5546 57.9956 28.563 57.9956 29.7273C57.9956 28.9572 58.172 28.2513 58.5248 27.5913C58.8864 26.9312 59.3716 26.3995 59.9802 26.0053C60.5976 25.602 61.2679 25.3911 62 25.3545C60.8798 25.2903 59.9361 24.8503 59.1599 24.0069C58.3837 23.1635 57.9956 22.1642 57.9956 21C57.9956 22.1642 57.6075 23.1635 56.8313 24.0069ZM81 25.3545C82.1114 25.2995 83.0551 24.8503 83.8313 24.0069C84.6075 23.1635 84.9956 22.1642 84.9956 21C84.9956 22.1642 85.3837 23.1635 86.1599 24.0069C86.9361 24.8503 87.8798 25.2903 89 25.3545C88.2679 25.3911 87.5976 25.602 86.9802 26.0053C86.3716 26.3995 85.8864 26.9312 85.5248 27.5913C85.172 28.2513 84.9956 28.9572 84.9956 29.7273C84.9956 28.563 84.6075 27.5546 83.8313 26.7112C83.0551 25.8587 82.1114 25.4095 81 25.3545ZM136 36.3545C137.111 36.2995 138.055 35.8503 138.831 35.0069C139.607 34.1635 139.996 33.1642 139.996 32C139.996 33.1642 140.384 34.1635 141.16 35.0069C141.936 35.8503 142.88 36.2903 144 36.3545C143.268 36.3911 142.598 36.602 141.98 37.0053C141.372 37.3995 140.886 37.9312 140.525 38.5913C140.172 39.2513 139.996 39.9572 139.996 40.7273C139.996 39.563 139.607 38.5546 138.831 37.7112C138.055 36.8587 137.111 36.4095 136 36.3545ZM101.831 49.0069C101.055 49.8503 100.111 50.2995 99 50.3545C100.111 50.4095 101.055 50.8587 101.831 51.7112C102.607 52.5546 102.996 53.563 102.996 54.7273C102.996 53.9572 103.172 53.2513 103.525 52.5913C103.886 51.9312 104.372 51.3995 104.98 51.0053C105.598 50.602 106.268 50.3911 107 50.3545C105.88 50.2903 104.936 49.8503 104.16 49.0069C103.384 48.1635 102.996 47.1642 102.996 46C102.996 47.1642 102.607 48.1635 101.831 49.0069Z" fill="currentColor"></path>
-                                </svg>
-                            </div>
-                            <div class="theme-switch__circle-container">
-                                <div class="theme-switch__sun-moon-container">
-                                <div class="theme-switch__moon">
-                                    <div class="theme-switch__spot"></div>
-                                    <div class="theme-switch__spot"></div>
-                                    <div class="theme-switch__spot"></div>
+    
+            <div>
+                <!-- Controles y enlaces -->
+                <div class="flex items-center justify-evenly my-4">
+                    <!-- Control de cambio de tema -->
+                    <label class="theme-switch">
+                        <input type="checkbox" class="theme-switch__checkbox" id="toggleLight" checked>
+                            <div class="theme-switch__container">
+                                <div class="theme-switch__clouds"></div>
+                                <div class="theme-switch__stars-container">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 55" fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M135.831 3.00688C135.055 3.85027 134.111 4.29946 133 4.35447C134.111 4.40947 135.055 4.85867 135.831 5.71123C136.607 6.55462 136.996 7.56303 136.996 8.72727C136.996 7.95722 137.172 7.25134 137.525 6.59129C137.886 5.93124 138.372 5.39954 138.98 5.00535C139.598 4.60199 140.268 4.39114 141 4.35447C139.88 4.2903 138.936 3.85027 138.16 3.00688C137.384 2.16348 136.996 1.16425 136.996 0C136.996 1.16425 136.607 2.16348 135.831 3.00688ZM31 23.3545C32.1114 23.2995 33.0551 22.8503 33.8313 22.0069C34.6075 21.1635 34.9956 20.1642 34.9956 19C34.9956 20.1642 35.3837 21.1635 36.1599 22.0069C36.9361 22.8503 37.8798 23.2903 39 23.3545C38.2679 23.3911 37.5976 23.602 36.9802 24.0053C36.3716 24.3995 35.8864 24.9312 35.5248 25.5913C35.172 26.2513 34.9956 26.9572 34.9956 27.7273C34.9956 26.563 34.6075 25.5546 33.8313 24.7112C33.0551 23.8587 32.1114 23.4095 31 23.3545ZM0 36.3545C1.11136 36.2995 2.05513 35.8503 2.83131 35.0069C3.6075 34.1635 3.99559 33.1642 3.99559 32C3.99559 33.1642 4.38368 34.1635 5.15987 35.0069C5.93605 35.8503 6.87982 36.2903 8 36.3545C7.26792 36.3911 6.59757 36.602 5.98015 37.0053C5.37155 37.3995 4.88644 37.9312 4.52481 38.5913C4.172 39.2513 3.99559 39.9572 3.99559 40.7273C3.99559 39.563 3.6075 38.5546 2.83131 37.7112C2.05513 36.8587 1.11136 36.4095 0 36.3545ZM56.8313 24.0069C56.0551 24.8503 55.1114 25.2995 54 25.3545C55.1114 25.4095 56.0551 25.8587 56.8313 26.7112C57.6075 27.5546 57.9956 28.563 57.9956 29.7273C57.9956 28.9572 58.172 28.2513 58.5248 27.5913C58.8864 26.9312 59.3716 26.3995 59.9802 26.0053C60.5976 25.602 61.2679 25.3911 62 25.3545C60.8798 25.2903 59.9361 24.8503 59.1599 24.0069C58.3837 23.1635 57.9956 22.1642 57.9956 21C57.9956 22.1642 57.6075 23.1635 56.8313 24.0069ZM81 25.3545C82.1114 25.2995 83.0551 24.8503 83.8313 24.0069C84.6075 23.1635 84.9956 22.1642 84.9956 21C84.9956 22.1642 85.3837 23.1635 86.1599 24.0069C86.9361 24.8503 87.8798 25.2903 89 25.3545C88.2679 25.3911 87.5976 25.602 86.9802 26.0053C86.3716 26.3995 85.8864 26.9312 85.5248 27.5913C85.172 28.2513 84.9956 28.9572 84.9956 29.7273C84.9956 28.563 84.6075 27.5546 83.8313 26.7112C83.0551 25.8587 82.1114 25.4095 81 25.3545ZM136 36.3545C137.111 36.2995 138.055 35.8503 138.831 35.0069C139.607 34.1635 139.996 33.1642 139.996 32C139.996 33.1642 140.384 34.1635 141.16 35.0069C141.936 35.8503 142.88 36.2903 144 36.3545C143.268 36.3911 142.598 36.602 141.98 37.0053C141.372 37.3995 140.886 37.9312 140.525 38.5913C140.172 39.2513 139.996 39.9572 139.996 40.7273C139.996 39.563 139.607 38.5546 138.831 37.7112C138.055 36.8587 137.111 36.4095 136 36.3545ZM101.831 49.0069C101.055 49.8503 100.111 50.2995 99 50.3545C100.111 50.4095 101.055 50.8587 101.831 51.7112C102.607 52.5546 102.996 53.563 102.996 54.7273C102.996 53.9572 103.172 53.2513 103.525 52.5913C103.886 51.9312 104.372 51.3995 104.98 51.0053C105.598 50.602 106.268 50.3911 107 50.3545C105.88 50.2903 104.936 49.8503 104.16 49.0069C103.384 48.1635 102.996 47.1642 102.996 46C102.996 47.1642 102.607 48.1635 101.831 49.0069Z" fill="currentColor"></path>
+                                    </svg>
                                 </div>
+                                <div class="theme-switch__circle-container">
+                                    <div class="theme-switch__sun-moon-container">
+                                    <div class="theme-switch__moon">
+                                        <div class="theme-switch__spot"></div>
+                                        <div class="theme-switch__spot"></div>
+                                        <div class="theme-switch__spot"></div>
+                                    </div>
+                                    </div>
                                 </div>
                             </div>
+                    </label>
+                    <!-- Barra vertical -->
+                    <div class="inline-block h-[50px] min-h-[1em] w-0.5 self-stretch bg-neutral-100 opacity-100 dark:opacity-50 mx-5"></div>
+                    <!-- Enlace a github -->
+                    <a href="https://github.com/DavidMojicaDev" target="_blank">
+                        <div class="group relative">
+                            <button>
+                                <svg stroke-linejoin="round" stroke-linecap="round" stroke-width="2" stroke="currentColor" fill="none" viewBox="0 0 24 24" class="w-8 hover:scale-125 duration-200 hover:stroke-blue-500"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                            </button>
+                            <span class="absolute -top-14 left-[50%] -translate-x-[50%] z-20 origin-left scale-0 px-3 rounded-lg border  border-gray-300 bg-white py-2 text-sm font-bold shadow-md transition-all duration-300 ease-in-out group-hover:scale-100 dark:text-black">GitHub
+                            </span>
                         </div>
-                </label>
-                <!-- Barra vertical -->
-                <div class="inline-block h-[50px] min-h-[1em] w-0.5 self-stretch bg-neutral-100 opacity-100 dark:opacity-50 mx-5"></div>
-                <!-- Enlace a github -->
-                <a href="">
-                    <div class="group relative">
-                        <button>
-                            <svg stroke-linejoin="round" stroke-linecap="round" stroke-width="2" stroke="currentColor" fill="none" viewBox="0 0 24 24" class="w-8 hover:scale-125 duration-200 hover:stroke-blue-500"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-                        </button>
-                        <span class="absolute -top-14 left-[50%] -translate-x-[50%] z-20 origin-left scale-0 px-3 rounded-lg border  border-gray-300 bg-white py-2 text-sm font-bold shadow-md transition-all duration-300 ease-in-out group-hover:scale-100 dark:text-black">GitHub
-                        </span>
+                    </a>
+                </div>
+                <!-- Menu para responsive -->
+                <div x-data="{ open: false }" class="md:hidden relative block text-left mx-4">
+                    <button @click="open = !open" class="inline-flex justify-center w-full px-4 py-2 text-sm font-medium text-white dark:text-gray-700 bg-semidark dark:bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-gray-100 focus:ring-blue-500"> Menu 
+                        <svg class="h-5 w-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div x-show="open" @click.away="open = false" class=" w-full origin-top-left absolute left-0 mt-2  rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 px-2 py-2">
+                      <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100 rounded-md text-blue-500 dark:text-purple-500">Inicio</a>
+                      <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">Servicios</a>
+                      <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">Demos</a>
+                      <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">Cotizar</a>
+                      <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">Contacto</a>
                     </div>
-                </a>
-            </div>
-            <!-- Menu para responsive -->
-            <div x-data="{ open: false }" class="md:hidden relative block text-left mx-4">
-                <button @click="open = !open" class="inline-flex justify-center w-full px-4 py-2 text-sm font-medium text-white dark:text-gray-700 bg-semidark dark:bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-offset-gray-100 focus:ring-blue-500"> Menu 
-                    <svg class="h-5 w-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                    </svg>
-                </button>
-                <div x-show="open" @click.away="open = false" class=" w-full origin-top-left absolute left-0 mt-2  rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 px-2 py-2">
-                  <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100 rounded-md text-blue-500 dark:text-purple-500">Inicio</a>
-                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">Servicios</a>
-                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">Demos</a>
-                  <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">Contacto</a>
                 </div>
             </div>
-        </div>
-    </header>
-
-    <section class="mt-12">
-        <div class="grid place-items-center ">
-            <div class="atropos a-night" id="a-night">
+        </header>
+        <section class="mt-20">
+            <article class="atropos a-night mainScene" id="a-night">
                 <div class="atropos-scale">
                   <div class="atropos-rotate">
-                      <div class="atropos-inner relative bg-gradient-to-br from-slate-900 to-purpleDarkSecondary rounded-2xl text-center items-center">
+                      <div class="atropos-inner relative bg-gradient-to-b from-slate-900 via-purpleDark to-purpleDarkSecondary rounded-2xl text-center items-center">
                         <img src="../resources/night-stars.png" alt="stars" class="absolute object-cover -top-mini" data-atropos-offset="-9.5">
                         <img src="../resources/night-moon.png" alt="moon" class="absolute object-cover mix-blend-screen" data-atropos-offset="-6.5">
-                        <img src="../resources/night-mountains_behind.png" alt="mountains_behind" class="absolute object-cover" data-atropos-offset="-4">
+                        <img src="../resources/night-mountains_behind.png" alt="mountains_behind" class="absolute object-cover" data-atropos-offset="-4">           
                         <img src="../resources/night-mountains_front.png" alt="mountains_front" class="absolute object-cover"  data-atropos-offset="0">
-                        <!-- <h1 class="text-3xl md:text-4xl lg:text-7xl xl:text-7xl font-semibold dark:text-cyan-50 hover:text-blue-500 dark:hover:text-purple-500 mt-48" data-atropos-offset="6" >David Mojíca</h1>
-                        <h2 class="text-base md:text-2xl lg:text-3xl xl:text-3xl font-bold text-blue-500 dark:text-purple-500 sm:text-sm" data-atropos-offset="6">Software Developer</h2> -->
-                        <a href="#" class=" border-purple-500 bg-purple-500 hover:bg-purple-700 hover:opacity-20  text-center rounded-xl relative bottom-4 ">Descubre más</a>
+                        <a href="#section2" class="bg-purple-700 text-white rounded-full px-4 py-2 md:px-8 md:py-4 font-bold md:text-xl  hover:bg-opacity-70 duration-200 hidden md:inline-flex md:translate-y-64 lg:translate-y-72 xl:translate-y-96">Descubre más</a>
                     </div>
                   </div>
                 </div>
-            </div>
+            </article>
 
-            <div class="atropos a-day" id="a-day">
+            <article class="atropos a-day mainScene" id="a-day">
                 <div class="atropos-scale">
                     <div class="atropos-scale">
                         <div class="atropos-rotate">
-                            <div class="atropos-inner relative bg-gradient-to-br from-yellow-100 to-blue-400 rounded-2xl text-center">
-                                <img src="../resources/day-forest.png" alt="forest" class="absolute object-cover w-extra" data-atropos-offset="-1.5">
-                                <img src="../resources/day-bird2.png" alt="bird2" class="absolute object-cover" data-atropos-offset="7.5">
-                                <img src="../resources/day-bird1.png" alt="bird1" class="absolute object-cover" data-atropos-offset="-8.5">
-                                <img src="../resources/day-rocks.png" alt="rocks" class="absolute object-cover" data-atropos-offset="1.5">
+                            <div class="atropos-inner relative bg-gradient-to-l from-yellow-200  via-yellow-100 to-blue-400 rounded-2xl text-center">
+                                <img src="../resources/day-mountains.png" alt="mountains_behind" class="absolute object-cover -top-6 md:-top-14 lg:-top-14 xl:-top-20" data-atropos-offset="-10.5">
+                                <img src="../resources/day-forest.png" alt="forest" class="absolute object-cover" data-atropos-offset="0">
+                                <img src="../resources/day-bird2.png" alt="bird2" class="absolute object-cover" data-atropos-offset="5.5">
+                                <img src="../resources/day-bird1.png" alt="bird1" class="absolute object-cover" data-atropos-offset="-5.5">
+                                <img src="../resources/day-rocks.png" alt="rocks" class="absolute object-cover w-extra" data-atropos-offset="1.5">
                                 <img src="../resources/day-water.png" alt="water"class="absolute object-cover">
+                                <a href="#section2" class="bg-green-700 text-white rounded-full px-4 py-2 md:px-8 md:py-4 font-bold md:text-xl  hover:bg-opacity-70 duration-200 hidden md:inline-flex md:translate-y-60 lg:translate-y-72 xl:translate-y-96">Descubre más</a>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </article>
+        </section>
+        <div class="grid place-content-center mt-28 ">
+            <a href="#section2" class="bg-blue-700 dark:bg-purple-700 text-white rounded-full px-4 py-2 md:px-8 md:py-4 font-bold md:text-xl hover:bg-opacity-70 duration-200 inline-flex md:hidden">Descubre más</a>
         </div>
+    </section>
+
+    <!-- 2nd Section: General Info -->
+    <section id="section2" class="h-screen bg-gradient-to-b from-blue-500 to-blue-800 dark:from-purple-900 dark:to-transparent grid grid-cols-2 place-items-center">
+       <article>
+        <h2 class="text-4xl md:text-5xl lg:text-8xl w-4/5 mx-auto break-words text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-violet-500 transition-all duration-1000 shadow-around">
+            Soluciones Web y Desktop a la medida. <i class="fa fa-code"></i>
+        </h2>
+        <p class="text-2xl w-4/5 break-words text-transparent bg-clip-text mx-auto bg-gradient-to-r from-pink-500 to-violet-500 transition-all duration-1000 shadow-around">
+            Desarrollamos tus páginas y aplicaciones con tus herramientas favoritas.
+        </p>
+       </article>
+    
+        <div></div>
+        <article class="w-4/5">
+            <div class="swiper Swiper mb-4 ">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide ">
+                    <article class="atropos lang-logo lang-logo1 w-4/5 h-4/5 mx-auto mt-auto flex items-center justify-center absolute">
+                        <div class="atropos-scale">
+                            <div class="atropos-rotate">
+                                <div class="atropos-inner relative rounded-2xl text-center items-center backdrop-blur-lg bg-white bg-opacity-20 p-2">
+                                    <img src="../resources/technologies/csharp.svg" alt="c#" class="w-24 h-24 mx-auto my-auto" data-atropos-offset="-8.5"> 
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                  </div>
+                  <div class="swiper-slide">
+                    <article class="atropos lang-logo lang-logo2 w-4/5 h-4/5 mx-auto mt-auto flex items-center justify-center absolute">
+                        <div class="atropos-scale">
+                            <div class="atropos-rotate">
+                                <div class="atropos-inner relative rounded-2xl text-center items-center backdrop-blur-lg bg-white bg-opacity-20 p-2">
+                                    <img src="../resources/technologies/cplus.svg" alt="c#" class="w-24 h-24 mx-auto my-auto" data-atropos-offset="-8.5"> 
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                  </div>
+                  <div class="swiper-slide">
+                    <article class="atropos lang-logo lang-logo3 w-4/5 h-4/5 mx-auto mt-auto flex items-center justify-center absolute">
+                        <div class="atropos-scale">
+                            <div class="atropos-rotate">
+                                <div class="atropos-inner relative rounded-2xl text-center items-center backdrop-blur-lg bg-white bg-opacity-20 p-2">
+                                    <img src="../resources/technologies/arduino.svg" alt="c#" class="w-24 h-24 mx-auto my-auto" data-atropos-offset="-8.5"> 
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                  </div>
+                  <div class="swiper-slide">
+                    <article class="atropos lang-logo lang-logo4 w-4/5 h-4/5 mx-auto mt-auto flex items-center justify-center absolute">
+                        <div class="atropos-scale">
+                            <div class="atropos-rotate">
+                                <div class="atropos-inner relative rounded-2xl text-center items-center backdrop-blur-lg bg-white bg-opacity-20 p-2">
+                                    <img src="../resources/technologies/html5.svg" alt="c#" class="w-24 h-24 mx-auto my-auto" data-atropos-offset="-8.5"> 
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                  </div>
+                  <div class="swiper-slide">
+                    <article class="atropos lang-logo lang-logo5 w-4/5 h-4/5 mx-auto mt-auto flex items-center justify-center absolute">
+                        <div class="atropos-scale">
+                            <div class="atropos-rotate">
+                                <div class="atropos-inner relative rounded-2xl text-center items-center backdrop-blur-lg bg-white bg-opacity-20 p-2">
+                                    <img src="../resources/technologies/css.svg" alt="c#" class="w-24 h-24 mx-auto my-auto" data-atropos-offset="-8.5"> 
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                  </div>
+                  <div class="swiper-slide">
+                    <article class="atropos lang-logo lang-logo6 w-4/5 h-4/5 mx-auto mt-auto flex items-center justify-center absolute">
+                        <div class="atropos-scale">
+                            <div class="atropos-rotate">
+                                <div class="atropos-inner relative rounded-2xl text-center items-center backdrop-blur-lg bg-white bg-opacity-20 p-2">
+                                    <img src="../resources/technologies/javascript.svg" alt="c#" class="w-24 h-24 mx-auto my-auto" data-atropos-offset="-8.5"> 
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                  </div>
+                  <div class="swiper-slide">
+                    <article class="atropos lang-logo lang-logo7 w-4/5 h-4/5 mx-auto mt-auto flex items-center justify-center absolute">
+                        <div class="atropos-scale">
+                            <div class="atropos-rotate">
+                                <div class="atropos-inner relative rounded-2xl text-center items-center backdrop-blur-lg bg-white bg-opacity-20 p-2">
+                                    <img src="../resources/technologies/typescript.svg" alt="c#" class="w-24 h-24 mx-auto my-auto" data-atropos-offset="-8.5"> 
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                  </div>
+                  <div class="swiper-slide">
+                    <article class="atropos lang-logo lang-logo8 w-4/5 h-4/5 mx-auto mt-auto flex items-center justify-center absolute">
+                        <div class="atropos-scale">
+                            <div class="atropos-rotate">
+                                <div class="atropos-inner relative rounded-2xl text-center items-center backdrop-blur-lg bg-white bg-opacity-20 p-2">
+                                    <img src="../resources/technologies/php.svg" alt="c#" class="w-24 h-24 mx-auto my-auto" data-atropos-offset="-8.5"> 
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                  </div>
+                  <div class="swiper-slide">
+                    <article class="atropos lang-logo lang-logo9 w-4/5 h-4/5 mx-auto mt-auto flex items-center justify-center absolute">
+                        <div class="atropos-scale">
+                            <div class="atropos-rotate">
+                                <div class="atropos-inner relative rounded-2xl text-center items-center backdrop-blur-lg bg-white bg-opacity-20 p-2">
+                                    <img src="../resources/technologies/python.svg" alt="c#" class="w-24 h-24 mx-auto my-auto" data-atropos-offset="-8.5"> 
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                  </div>
+                </div>
+            </div>
+            <div class="swiper revSw mb-4">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <article class="atropos lang-logo db-logo1 w-4/5 h-4/5 mx-auto mt-auto flex items-center justify-center absolute">
+                        <div class="atropos-scale">
+                            <div class="atropos-rotate">
+                                <div class="atropos-inner relative rounded-2xl text-center items-center backdrop-blur-lg bg-white bg-opacity-20 p-2">
+                                    <img src="../resources/technologies/mariadb.svg" alt="c#" class="w-24 h-24 mx-auto my-auto" data-atropos-offset="-8.5"> 
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                  </div>
+                  <div class="swiper-slide">
+                    <article class="atropos lang-logo db-logo2 w-4/5 h-4/5 mx-auto mt-auto flex items-center justify-center absolute">
+                        <div class="atropos-scale">
+                            <div class="atropos-rotate">
+                                <div class="atropos-inner relative rounded-2xl text-center items-center backdrop-blur-lg bg-white bg-opacity-20 p-2">
+                                    <img src="../resources/technologies/mysql.svg" alt="c#" class="w-24 h-24 mx-auto my-auto" data-atropos-offset="-8.5"> 
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                  </div>
+                  <div class="swiper-slide">
+                    <article class="atropos lang-logo db-logo3 w-4/5 h-4/5 mx-auto mt-auto flex items-center justify-center absolute">
+                        <div class="atropos-scale">
+                            <div class="atropos-rotate">
+                                <div class="atropos-inner relative rounded-2xl text-center items-center backdrop-blur-lg bg-white bg-opacity-20 p-2">
+                                    <img src="../resources/technologies/postqresql.svg" alt="c#" class="w-24 h-24 mx-auto my-auto" data-atropos-offset="-8.5"> 
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                  </div>
+                  <div class="swiper-slide">
+                    <article class="atropos lang-logo db-logo4 w-4/5 h-4/5 mx-auto mt-auto flex items-center justify-center absolute">
+                        <div class="atropos-scale">
+                            <div class="atropos-rotate">
+                                <div class="atropos-inner relative rounded-2xl text-center items-center backdrop-blur-lg bg-white bg-opacity-20 p-2">
+                                    <img src="../resources/technologies/phpmyadmin.svg" alt="c#" class="w-24 h-24 mx-auto my-auto" data-atropos-offset="-8.5"> 
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                  </div>
+                  <div class="swiper-slide">
+                    <article class="atropos lang-logo db-logo5 w-4/5 h-4/5 mx-auto mt-auto flex items-center justify-center absolute">
+                        <div class="atropos-scale">
+                            <div class="atropos-rotate">
+                                <div class="atropos-inner relative rounded-2xl text-center items-center backdrop-blur-lg bg-white bg-opacity-20 p-2">
+                                    <img src="../resources/technologies/sqlserver.svg" alt="c#" class="w-24 h-24 mx-auto my-auto" data-atropos-offset="-8.5"> 
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                  </div>
+                </div>
+            </div>
+            <div class="swiper Swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <article class="atropos lang-logo tool-logo1 w-4/5 h-4/5 mx-auto mt-auto flex items-center justify-center absolute">
+                        <div class="atropos-scale">
+                            <div class="atropos-rotate">
+                                <div class="atropos-inner relative rounded-2xl text-center items-center backdrop-blur-lg bg-white bg-opacity-20 p-2">
+                                    <img src="../resources/technologies/bootstrap.svg" alt="c#" class="w-24 h-24 mx-auto my-auto" data-atropos-offset="-8.5"> 
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                  </div>
+                  <div class="swiper-slide">
+                    <article class="atropos lang-logo tool-logo2 w-4/5 h-4/5 mx-auto mt-auto flex items-center justify-center absolute">
+                        <div class="atropos-scale">
+                            <div class="atropos-rotate">
+                                <div class="atropos-inner relative rounded-2xl text-center items-center backdrop-blur-lg bg-white bg-opacity-20 p-2">
+                                    <img src="../resources/technologies/tailwind.svg" alt="c#" class="w-24 h-24 mx-auto my-auto" data-atropos-offset="-8.5"> 
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                  </div>
+                  <div class="swiper-slide">
+                    <article class="atropos lang-logo tool-logo3 w-4/5 h-4/5 mx-auto mt-auto flex items-center justify-center absolute">
+                        <div class="atropos-scale">
+                            <div class="atropos-rotate">
+                                <div class="atropos-inner relative rounded-2xl text-center items-center backdrop-blur-lg bg-white bg-opacity-20 p-2">
+                                    <img src="../resources/technologies/sass.svg" alt="c#" class="w-24 h-24 mx-auto my-auto" data-atropos-offset="-8.5"> 
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                  </div>
+                  <div class="swiper-slide">
+                    <article class="atropos lang-logo tool-logo4 w-4/5 h-4/5 mx-auto mt-auto flex items-center justify-center absolute">
+                        <div class="atropos-scale">
+                            <div class="atropos-rotate">
+                                <div class="atropos-inner relative rounded-2xl text-center items-center backdrop-blur-lg bg-white bg-opacity-20 p-2">
+                                    <img src="../resources/technologies/django.svg" alt="c#" class="w-24 h-24 mx-auto my-auto" data-atropos-offset="-8.5"> 
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                  </div>
+                  <div class="swiper-slide">
+                    <article class="atropos lang-logo tool-logo5 w-4/5 h-4/5 mx-auto mt-auto flex items-center justify-center absolute">
+                        <div class="atropos-scale">
+                            <div class="atropos-rotate">
+                                <div class="atropos-inner relative rounded-2xl text-center items-center backdrop-blur-lg bg-white bg-opacity-20 p-2">
+                                    <img src="../resources/technologies/net.svg" alt="c#" class="w-24 h-24 mx-auto my-auto" data-atropos-offset="-8.5"> 
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                  </div>
+                  <div class="swiper-slide">
+                    <article class="atropos lang-logo tool-logo6 w-4/5 h-4/5 mx-auto mt-auto flex items-center justify-center absolute">
+                        <div class="atropos-scale">
+                            <div class="atropos-rotate">
+                                <div class="atropos-inner relative rounded-2xl text-center items-center backdrop-blur-lg bg-white bg-opacity-20 p-2">
+                                    <img src="../resources/technologies/git.svg" alt="c#" class="w-24 h-24 mx-auto my-auto" data-atropos-offset="-8.5"> 
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                  </div>
+                  <div class="swiper-slide">
+                    <article class="atropos lang-logo tool-logo7 w-4/5 h-4/5 mx-auto mt-auto flex items-center justify-center absolute">
+                        <div class="atropos-scale">
+                            <div class="atropos-rotate">
+                                <div class="atropos-inner relative rounded-2xl text-center items-center backdrop-blur-lg bg-white bg-opacity-20 p-2">
+                                    <img src="../resources/technologies/github.svg" alt="c#" class="w-24 h-24 mx-auto my-auto" data-atropos-offset="-8.5"> 
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                  </div>
+                  <div class="swiper-slide">
+                    <article class="atropos lang-logo tool-logo8 w-4/5 h-4/5 mx-auto mt-auto flex items-center justify-center absolute">
+                        <div class="atropos-scale">
+                            <div class="atropos-rotate">
+                                <div class="atropos-inner relative rounded-2xl text-center items-center backdrop-blur-lg bg-white bg-opacity-20 p-2">
+                                    <img src="../resources/technologies/npm.svg" alt="c#" class="w-24 h-24 mx-auto my-auto" data-atropos-offset="-8.5"> 
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                  </div>
+                  <div class="swiper-slide">
+                    <article class="atropos lang-logo tool-logo9 w-4/5 h-4/5 mx-auto mt-auto flex items-center justify-center absolute">
+                        <div class="atropos-scale">
+                            <div class="atropos-rotate">
+                                <div class="atropos-inner relative rounded-2xl text-center items-center backdrop-blur-lg bg-white bg-opacity-20 p-2">
+                                    <img src="../resources/technologies/node.svg" alt="c#" class="w-24 h-24 mx-auto my-auto" data-atropos-offset="-8.5"> 
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                  </div>
+                  <div class="swiper-slide">
+                    <article class="atropos lang-logo tool-logo10 w-4/5 h-4/5 mx-auto mt-auto flex items-center justify-center absolute">
+                        <div class="atropos-scale">
+                            <div class="atropos-rotate">
+                                <div class="atropos-inner relative rounded-2xl text-center items-center backdrop-blur-lg bg-white bg-opacity-20 p-2">
+                                    <img src="../resources/technologies/raspberry.svg" alt="c#" class="w-24 h-24 mx-auto my-auto" data-atropos-offset="-8.5"> 
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                  </div>
+                </div>
+            </div>
+        </article>
+        
     </section>
 
 
