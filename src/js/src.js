@@ -160,6 +160,13 @@ var aLogo = Atropos({
     shadow: false
 });
 
+var aMobile = Atropos({
+    el: '.a-mobile',
+    activeOffset:0,
+    highlight: false,
+    shadow: false
+});
+
 //Swiper
 var swiper = new Swiper(".Swiper", {
     slidesPerView: 4,
