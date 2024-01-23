@@ -14,7 +14,6 @@ const dayScene = Atropos({
 
 var aLogo = Atropos({
     el: '.lang-logo1',
-    activeOffset:0,
     highlight: false,
     shadow: false
 });
@@ -162,8 +161,7 @@ var aLogo = Atropos({
 
 var aMobile = Atropos({
     el: '.a-mobile',
-    activeOffset:0,
-    highlight: false,
+    activeOffset:80,
     shadow: false
 });
 
