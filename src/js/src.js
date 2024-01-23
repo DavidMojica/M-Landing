@@ -167,8 +167,8 @@ var aMobile = Atropos({
 
 //Swiper
 var swiper = new Swiper(".Swiper", {
-    slidesPerView: 4,
-    spaceBetween: 10,
+    slidesPerView: 3,
+    spaceBetween: 0,
     // freeMode: true,
     pagination: {
       el: ".swiper-pagination",
@@ -181,8 +181,8 @@ var swiper = new Swiper(".Swiper", {
 });
 
 var reverseSwiper = new Swiper(".revSw", {
-    slidesPerView: 4,
-    spaceBetween: 10,
+    slidesPerView: 3,
+    spaceBetween: 0,
     freeMode: true,
     pagination: {
       el: ".swiper-pagination",
