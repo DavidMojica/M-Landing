@@ -26,6 +26,9 @@ module.exports = {
         med: '40%',
         hg: '60%',
         extra: '80%'
+      },
+      fontSize:{
+        a7xl: '86px',
       }
     },
   },

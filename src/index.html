@@ -15,11 +15,11 @@
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
     <title>MS</title>
 </head>
-<body class="dark:bg-slate-900 dark:text-dark-text text-semidark bg-slate-200 h-screen bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]">
+<body class="dark:bg-slate-900 dark:text-dark-text text-semidark bg-slate-200 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]">
     
     <!-- 1st Section: Header, atropos y hidden -->
     
-    <section class="border-b-2 border-blue-700 dark:border-purple-700 border-solid h-screen">
+    <section class="border-b-2 border-blue-700 dark:border-purple-700 border-solid min-h-screen">
         <header class="z-50 top-0 flex items-center justify-evenly w-4/5 mx-auto">
             <a href="#">
                 <div class="flex flex-col items-center justify-center text-center">
@@ -131,17 +131,20 @@
     </section>
 
     <!-- 2nd Section: General Info -->
-    <section id="section2" class="h-screen bg-gradient-to-b from-blue-500 to-blue-800 dark:from-purple-900 dark:to-transparent grid grid-cols-2 place-items-center">
-        <section class="w-4/5">
-            <article class="mb-8">
-                <h2 class="text-4xl md:text-5xl lg:text-8xl mx-auto break-words text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-violet-500 transition-all duration-1000 shadow-around">
-                    Soluciones Web y Desktop a la medida. <i class="fa fa-code"></i>
+    <section id="section2" class="min-h-screen bg-gradient-to-b from-blue-500 to-blue-800 dark:from-purple-900 dark:to-transparent grid grid-cols-1 lg:grid-cols-2 place-items-center">
+        <!-- Soluciones... -->
+        <section class="w-4/5 h-full xl:col-span-1">
+            <!-- Text -->
+            <article class="my-16">
+                <h2 class="text-4xl md:text-5xl lg:text-6xl xl:text-a7xl mx-auto text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-violet-500 transition-all duration-1000 shadow-around">
+                    Soluciones Web a la medida. <i class="fa fa-code"></i>
                 </h2>
-                <p class="text-2xl break-words text-transparent bg-clip-text mx-auto bg-gradient-to-r from-pink-500 to-violet-500 transition-all duration-1000 shadow-around">
-                    Desarrollamos tus páginas y aplicaciones con tus herramientas preferidas.
+                <p class="text-2xl  break-words text-transparent bg-clip-text mx-auto bg-gradient-to-r from-violet-500 to-pink-500 transition-all duration-1000 shadow-around">
+                    Desarrollamos desde sitios estáticos hasta aplicaciones web más complejas y expandibles en el tiempo con tus herramientas preferidas.
                 </p>
             </article>
-            <article class="w-10/12 cursor-grabbing">
+            <!-- Icons -->
+            <article class="w-full md:w-10/12 lg:w-full xl:w-10/12 cursor-grabbing mx-auto">
                 <div class="swiper Swiper mb-6">
                     <div class="swiper-wrapper">
                       <div class="swiper-slide ">
@@ -420,6 +423,7 @@
                 </div>
             </article>
         </section>
+       <!-- Devices -->
         <section class="w-4/5 flex items-center justify-center h-hg">
             <article class="atropos a-mobile h-full">
                 <div class="atropos-scale">
