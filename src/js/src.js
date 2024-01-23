@@ -14,7 +14,6 @@ const dayScene = Atropos({
 
 var aLogo = Atropos({
     el: '.lang-logo1',
-    activeOffset:0,
     highlight: false,
     shadow: false
 });
@@ -160,10 +159,16 @@ var aLogo = Atropos({
     shadow: false
 });
 
+var aMobile = Atropos({
+    el: '.a-mobile',
+    activeOffset:80,
+    shadow: false
+});
+
 //Swiper
 var swiper = new Swiper(".Swiper", {
-    slidesPerView: 4,
-    spaceBetween: 10,
+    slidesPerView: 3,
+    spaceBetween: 0,
     // freeMode: true,
     pagination: {
       el: ".swiper-pagination",
@@ -176,8 +181,8 @@ var swiper = new Swiper(".Swiper", {
 });
 
 var reverseSwiper = new Swiper(".revSw", {
-    slidesPerView: 4,
-    spaceBetween: 10,
+    slidesPerView: 3,
+    spaceBetween: 0,
     freeMode: true,
     pagination: {
       el: ".swiper-pagination",

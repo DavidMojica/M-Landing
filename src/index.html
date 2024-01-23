@@ -15,11 +15,11 @@
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
     <title>MS</title>
 </head>
-<body class="dark:bg-slate-900 dark:text-dark-text text-semidark bg-slate-200 h-screen bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]">
+<body class="dark:bg-slate-900 dark:text-dark-text text-semidark bg-slate-200 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]">
     
     <!-- 1st Section: Header, atropos y hidden -->
     
-    <section class="border-b-2 border-blue-700 dark:border-purple-700 border-solid h-screen">
+    <section class="border-b-2 border-blue-700 dark:border-purple-700 border-solid min-h-screen">
         <header class="z-50 top-0 flex items-center justify-evenly w-4/5 mx-auto">
             <a href="#">
                 <div class="flex flex-col items-center justify-center text-center">
@@ -131,24 +131,27 @@
     </section>
 
     <!-- 2nd Section: General Info -->
-    <section id="section2" class="h-screen bg-gradient-to-b from-blue-500 to-blue-800 dark:from-purple-900 dark:to-transparent grid grid-cols-2 place-items-center">
-        <section class="w-4/5">
-            <article class="mb-8">
-                <h2 class="text-4xl md:text-5xl lg:text-8xl mx-auto break-words text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-violet-500 transition-all duration-1000 shadow-around">
-                    Soluciones Web y Desktop a la medida. <i class="fa fa-code"></i>
+    <section id="section2" class="min-h-screen bg-gradient-to-b from-blue-600 to-blue-300 dark:from-purple-900 dark:to-transparent grid grid-cols-1 lg:grid-cols-2 place-items-center">
+        <!-- Soluciones... -->
+        <section class="w-4/5 h-full xl:col-span-1">
+            <!-- Text -->
+            <article class="my-16">
+                <h2 class="text-center mb-2 md:text-start text-5xl md:text-5xl lg:text-6xl xl:text-a7xl mx-auto text-transparent bg-clip-text bg-gradient-to-r from-white to-orange-400 dark:from-pink-500 dark:to-violet-500 transition-all duration-1000 shadow-around">
+                    Soluciones Web a la medida. <i class="fa fa-code"></i>
                 </h2>
-                <p class="text-2xl break-words text-transparent bg-clip-text mx-auto bg-gradient-to-r from-pink-500 to-violet-500 transition-all duration-1000 shadow-around">
-                    Desarrollamos tus páginas y aplicaciones con tus herramientas preferidas.
+                <p class="text-white w-3/4 md:w-full text-center md:text-start text-base md:text-2xl break-words dark:text-transparent dark:bg-clip-text mx-auto dark:bg-gradient-to-r dark:from-violet-500 dark:to-pink-500 dark:transition-all dark:duration-1000 dark:shadow-around">
+                    Desarrollamos desde sitios estáticos hasta aplicaciones web más complejas y expandibles en el tiempo con tus herramientas preferidas.
                 </p>
             </article>
-            <article class="w-10/12 cursor-grabbing">
-                <div class="swiper Swiper mb-6">
+            <!-- Icons -->
+            <article class="w-full md:w-10/12 lg:w-full xl:w-10/12 cursor-grabbing mx-auto mb-12">
+                <div class="swiper Swiper">
                     <div class="swiper-wrapper">
                       <div class="swiper-slide ">
                         <article class="atropos lang-logo lang-logo1 w-4/5 h-4/5 mx-auto mt-auto flex items-center justify-center absolute">
                             <div class="atropos-scale">
-                                <div class="atropos-rotate">
-                                    <div class="atropos-inner relative rounded-2xl text-center items-center backdrop-blur-lg bg-white bg-opacity-20 p-2">
+                                <div class="atropos-rotate ">
+                                    <div class="atropos-inner relative rounded-2xl items-center backdrop-blur-lg bg-white bg-opacity-10 p-2 ">
                                         <img src="../resources/technologies/csharp.svg" alt="c#" class="w-24 h-24 mx-auto my-auto" data-atropos-offset="-8.5"> 
                                     </div>
                                 </div>
@@ -159,7 +162,7 @@
                         <article class="atropos lang-logo lang-logo2 w-4/5 h-4/5 mx-auto mt-auto flex items-center justify-center absolute">
                             <div class="atropos-scale">
                                 <div class="atropos-rotate">
-                                    <div class="atropos-inner relative rounded-2xl text-center items-center backdrop-blur-lg bg-white bg-opacity-20 p-2">
+                                    <div class="atropos-inner relative rounded-2xl text-center items-center backdrop-blur-lg bg-white bg-opacity-10 p-2">
                                         <img src="../resources/technologies/cplus.svg" alt="c#" class="w-24 h-24 mx-auto my-auto" data-atropos-offset="-8.5"> 
                                     </div>
                                 </div>
@@ -170,7 +173,7 @@
                         <article class="atropos lang-logo lang-logo3 w-4/5 h-4/5 mx-auto mt-auto flex items-center justify-center absolute">
                             <div class="atropos-scale">
                                 <div class="atropos-rotate">
-                                    <div class="atropos-inner relative rounded-2xl text-center items-center backdrop-blur-lg bg-white bg-opacity-20 p-2">
+                                    <div class="atropos-inner relative rounded-2xl text-center items-center backdrop-blur-lg bg-white bg-opacity-10 p-2">
                                         <img src="../resources/technologies/arduino.svg" alt="c#" class="w-24 h-24 mx-auto my-auto" data-atropos-offset="-8.5"> 
                                     </div>
                                 </div>
@@ -181,7 +184,7 @@
                         <article class="atropos lang-logo lang-logo4 w-4/5 h-4/5 mx-auto mt-auto flex items-center justify-center absolute">
                             <div class="atropos-scale">
                                 <div class="atropos-rotate">
-                                    <div class="atropos-inner relative rounded-2xl text-center items-center backdrop-blur-lg bg-white bg-opacity-20 p-2">
+                                    <div class="atropos-inner relative rounded-2xl text-center items-center backdrop-blur-lg bg-white bg-opacity-10 p-2">
                                         <img src="../resources/technologies/html5.svg" alt="c#" class="w-24 h-24 mx-auto my-auto" data-atropos-offset="-8.5"> 
                                     </div>
                                 </div>
@@ -192,7 +195,7 @@
                         <article class="atropos lang-logo lang-logo5 w-4/5 h-4/5 mx-auto mt-auto flex items-center justify-center absolute">
                             <div class="atropos-scale">
                                 <div class="atropos-rotate">
-                                    <div class="atropos-inner relative rounded-2xl text-center items-center backdrop-blur-lg bg-white bg-opacity-20 p-2">
+                                    <div class="atropos-inner relative rounded-2xl text-center items-center backdrop-blur-lg bg-white bg-opacity-10 p-2">
                                         <img src="../resources/technologies/css.svg" alt="c#" class="w-24 h-24 mx-auto my-auto" data-atropos-offset="-8.5"> 
                                     </div>
                                 </div>
@@ -203,7 +206,7 @@
                         <article class="atropos lang-logo lang-logo6 w-4/5 h-4/5 mx-auto mt-auto flex items-center justify-center absolute">
                             <div class="atropos-scale">
                                 <div class="atropos-rotate">
-                                    <div class="atropos-inner relative rounded-2xl text-center items-center backdrop-blur-lg bg-white bg-opacity-20 p-2">
+                                    <div class="atropos-inner relative rounded-2xl text-center items-center backdrop-blur-lg bg-white bg-opacity-10 p-2">
                                         <img src="../resources/technologies/javascript.svg" alt="c#" class="w-24 h-24 mx-auto my-auto" data-atropos-offset="-8.5"> 
                                     </div>
                                 </div>
@@ -214,7 +217,7 @@
                         <article class="atropos lang-logo lang-logo7 w-4/5 h-4/5 mx-auto mt-auto flex items-center justify-center absolute">
                             <div class="atropos-scale">
                                 <div class="atropos-rotate">
-                                    <div class="atropos-inner relative rounded-2xl text-center items-center backdrop-blur-lg bg-white bg-opacity-20 p-2">
+                                    <div class="atropos-inner relative rounded-2xl text-center items-center backdrop-blur-lg bg-white bg-opacity-10 p-2">
                                         <img src="../resources/technologies/typescript.svg" alt="c#" class="w-24 h-24 mx-auto my-auto" data-atropos-offset="-8.5"> 
                                     </div>
                                 </div>
@@ -225,7 +228,7 @@
                         <article class="atropos lang-logo lang-logo8 w-4/5 h-4/5 mx-auto mt-auto flex items-center justify-center absolute">
                             <div class="atropos-scale">
                                 <div class="atropos-rotate">
-                                    <div class="atropos-inner relative rounded-2xl text-center items-center backdrop-blur-lg bg-white bg-opacity-20 p-2">
+                                    <div class="atropos-inner relative rounded-2xl text-center items-center backdrop-blur-lg bg-white bg-opacity-10 p-2">
                                         <img src="../resources/technologies/php.svg" alt="c#" class="w-24 h-24 mx-auto my-auto" data-atropos-offset="-8.5"> 
                                     </div>
                                 </div>
@@ -236,7 +239,7 @@
                         <article class="atropos lang-logo lang-logo9 w-4/5 h-4/5 mx-auto mt-auto flex items-center justify-center absolute">
                             <div class="atropos-scale">
                                 <div class="atropos-rotate">
-                                    <div class="atropos-inner relative rounded-2xl text-center items-center backdrop-blur-lg bg-white bg-opacity-20 p-2">
+                                    <div class="atropos-inner relative rounded-2xl text-center items-center backdrop-blur-lg bg-white bg-opacity-10 p-2">
                                         <img src="../resources/technologies/python.svg" alt="c#" class="w-24 h-24 mx-auto my-auto" data-atropos-offset="-8.5"> 
                                     </div>
                                 </div>
@@ -245,13 +248,13 @@
                       </div>
                     </div>
                 </div>
-                <div class="swiper revSw mb-4">
+                <div class="swiper revSw my-6">
                     <div class="swiper-wrapper">
                       <div class="swiper-slide">
                         <article class="atropos lang-logo db-logo1 w-4/5 h-4/5 mx-auto mt-auto flex items-center justify-center absolute">
                             <div class="atropos-scale">
                                 <div class="atropos-rotate">
-                                    <div class="atropos-inner relative rounded-2xl text-center items-center backdrop-blur-lg bg-white bg-opacity-20 p-2">
+                                    <div class="atropos-inner relative rounded-2xl text-center items-center backdrop-blur-lg bg-white bg-opacity-10 p-2">
                                         <img src="../resources/technologies/mariadb.svg" alt="c#" class="w-24 h-24 mx-auto my-auto" data-atropos-offset="-8.5"> 
                                     </div>
                                 </div>
@@ -262,7 +265,7 @@
                         <article class="atropos lang-logo db-logo2 w-4/5 h-4/5 mx-auto mt-auto flex items-center justify-center absolute">
                             <div class="atropos-scale">
                                 <div class="atropos-rotate">
-                                    <div class="atropos-inner relative rounded-2xl text-center items-center backdrop-blur-lg bg-white bg-opacity-20 p-2">
+                                    <div class="atropos-inner relative rounded-2xl text-center items-center backdrop-blur-lg bg-white bg-opacity-10 p-2">
                                         <img src="../resources/technologies/mysql.svg" alt="c#" class="w-24 h-24 mx-auto my-auto" data-atropos-offset="-8.5"> 
                                     </div>
                                 </div>
@@ -273,7 +276,7 @@
                         <article class="atropos lang-logo db-logo3 w-4/5 h-4/5 mx-auto mt-auto flex items-center justify-center absolute">
                             <div class="atropos-scale">
                                 <div class="atropos-rotate">
-                                    <div class="atropos-inner relative rounded-2xl text-center items-center backdrop-blur-lg bg-white bg-opacity-20 p-2">
+                                    <div class="atropos-inner relative rounded-2xl text-center items-center backdrop-blur-lg bg-white bg-opacity-10 p-2">
                                         <img src="../resources/technologies/postqresql.svg" alt="c#" class="w-24 h-24 mx-auto my-auto" data-atropos-offset="-8.5"> 
                                     </div>
                                 </div>
@@ -284,7 +287,7 @@
                         <article class="atropos lang-logo db-logo4 w-4/5 h-4/5 mx-auto mt-auto flex items-center justify-center absolute">
                             <div class="atropos-scale">
                                 <div class="atropos-rotate">
-                                    <div class="atropos-inner relative rounded-2xl text-center items-center backdrop-blur-lg bg-white bg-opacity-20 p-2">
+                                    <div class="atropos-inner relative rounded-2xl text-center items-center backdrop-blur-lg bg-white bg-opacity-10 p-2">
                                         <img src="../resources/technologies/phpmyadmin.svg" alt="c#" class="w-24 h-24 mx-auto my-auto" data-atropos-offset="-8.5"> 
                                     </div>
                                 </div>
@@ -295,7 +298,7 @@
                         <article class="atropos lang-logo db-logo5 w-4/5 h-4/5 mx-auto mt-auto flex items-center justify-center absolute">
                             <div class="atropos-scale">
                                 <div class="atropos-rotate">
-                                    <div class="atropos-inner relative rounded-2xl text-center items-center backdrop-blur-lg bg-white bg-opacity-20 p-2">
+                                    <div class="atropos-inner relative rounded-2xl text-center items-center backdrop-blur-lg bg-white bg-opacity-10 p-2">
                                         <img src="../resources/technologies/sqlserver.svg" alt="c#" class="w-24 h-24 mx-auto my-auto" data-atropos-offset="-8.5"> 
                                     </div>
                                 </div>
@@ -310,7 +313,7 @@
                         <article class="atropos lang-logo tool-logo1 w-4/5 h-4/5 mx-auto mt-auto flex items-center justify-center absolute">
                             <div class="atropos-scale">
                                 <div class="atropos-rotate">
-                                    <div class="atropos-inner relative rounded-2xl text-center items-center backdrop-blur-lg bg-white bg-opacity-20 p-2">
+                                    <div class="atropos-inner relative rounded-2xl text-center items-center backdrop-blur-lg bg-white bg-opacity-10 p-2">
                                         <img src="../resources/technologies/bootstrap.svg" alt="c#" class="w-24 h-24 mx-auto my-auto" data-atropos-offset="-8.5"> 
                                     </div>
                                 </div>
@@ -321,7 +324,7 @@
                         <article class="atropos lang-logo tool-logo2 w-4/5 h-4/5 mx-auto mt-auto flex items-center justify-center absolute">
                             <div class="atropos-scale">
                                 <div class="atropos-rotate">
-                                    <div class="atropos-inner relative rounded-2xl text-center items-center backdrop-blur-lg bg-white bg-opacity-20 p-2">
+                                    <div class="atropos-inner relative rounded-2xl text-center items-center backdrop-blur-lg bg-white bg-opacity-10 p-2">
                                         <img src="../resources/technologies/tailwind.svg" alt="c#" class="w-24 h-24 mx-auto my-auto" data-atropos-offset="-8.5"> 
                                     </div>
                                 </div>
@@ -332,7 +335,7 @@
                         <article class="atropos lang-logo tool-logo3 w-4/5 h-4/5 mx-auto mt-auto flex items-center justify-center absolute">
                             <div class="atropos-scale">
                                 <div class="atropos-rotate">
-                                    <div class="atropos-inner relative rounded-2xl text-center items-center backdrop-blur-lg bg-white bg-opacity-20 p-2">
+                                    <div class="atropos-inner relative rounded-2xl text-center items-center backdrop-blur-lg bg-white bg-opacity-10 p-2">
                                         <img src="../resources/technologies/sass.svg" alt="c#" class="w-24 h-24 mx-auto my-auto" data-atropos-offset="-8.5"> 
                                     </div>
                                 </div>
@@ -343,7 +346,7 @@
                         <article class="atropos lang-logo tool-logo4 w-4/5 h-4/5 mx-auto mt-auto flex items-center justify-center absolute">
                             <div class="atropos-scale">
                                 <div class="atropos-rotate">
-                                    <div class="atropos-inner relative rounded-2xl text-center items-center backdrop-blur-lg bg-white bg-opacity-20 p-2">
+                                    <div class="atropos-inner relative rounded-2xl text-center items-center backdrop-blur-lg bg-white bg-opacity-10 p-2">
                                         <img src="../resources/technologies/django.svg" alt="c#" class="w-24 h-24 mx-auto my-auto" data-atropos-offset="-8.5"> 
                                     </div>
                                 </div>
@@ -354,7 +357,7 @@
                         <article class="atropos lang-logo tool-logo5 w-4/5 h-4/5 mx-auto mt-auto flex items-center justify-center absolute">
                             <div class="atropos-scale">
                                 <div class="atropos-rotate">
-                                    <div class="atropos-inner relative rounded-2xl text-center items-center backdrop-blur-lg bg-white bg-opacity-20 p-2">
+                                    <div class="atropos-inner relative rounded-2xl text-center items-center backdrop-blur-lg bg-white bg-opacity-10 p-2">
                                         <img src="../resources/technologies/net.svg" alt="c#" class="w-24 h-24 mx-auto my-auto" data-atropos-offset="-8.5"> 
                                     </div>
                                 </div>
@@ -365,7 +368,7 @@
                         <article class="atropos lang-logo tool-logo6 w-4/5 h-4/5 mx-auto mt-auto flex items-center justify-center absolute">
                             <div class="atropos-scale">
                                 <div class="atropos-rotate">
-                                    <div class="atropos-inner relative rounded-2xl text-center items-center backdrop-blur-lg bg-white bg-opacity-20 p-2">
+                                    <div class="atropos-inner relative rounded-2xl text-center items-center backdrop-blur-lg bg-white bg-opacity-10 p-2">
                                         <img src="../resources/technologies/git.svg" alt="c#" class="w-24 h-24 mx-auto my-auto" data-atropos-offset="-8.5"> 
                                     </div>
                                 </div>
@@ -376,7 +379,7 @@
                         <article class="atropos lang-logo tool-logo7 w-4/5 h-4/5 mx-auto mt-auto flex items-center justify-center absolute">
                             <div class="atropos-scale">
                                 <div class="atropos-rotate">
-                                    <div class="atropos-inner relative rounded-2xl text-center items-center backdrop-blur-lg bg-white bg-opacity-20 p-2">
+                                    <div class="atropos-inner relative rounded-2xl text-center items-center backdrop-blur-lg bg-white bg-opacity-10 p-2">
                                         <img src="../resources/technologies/github.svg" alt="c#" class="w-24 h-24 mx-auto my-auto" data-atropos-offset="-8.5"> 
                                     </div>
                                 </div>
@@ -387,7 +390,7 @@
                         <article class="atropos lang-logo tool-logo8 w-4/5 h-4/5 mx-auto mt-auto flex items-center justify-center absolute">
                             <div class="atropos-scale">
                                 <div class="atropos-rotate">
-                                    <div class="atropos-inner relative rounded-2xl text-center items-center backdrop-blur-lg bg-white bg-opacity-20 p-2">
+                                    <div class="atropos-inner relative rounded-2xl text-center items-center backdrop-blur-lg bg-white bg-opacity-10 p-2">
                                         <img src="../resources/technologies/npm.svg" alt="c#" class="w-24 h-24 mx-auto my-auto" data-atropos-offset="-8.5"> 
                                     </div>
                                 </div>
@@ -398,7 +401,7 @@
                         <article class="atropos lang-logo tool-logo9 w-4/5 h-4/5 mx-auto mt-auto flex items-center justify-center absolute">
                             <div class="atropos-scale">
                                 <div class="atropos-rotate">
-                                    <div class="atropos-inner relative rounded-2xl text-center items-center backdrop-blur-lg bg-white bg-opacity-20 p-2">
+                                    <div class="atropos-inner relative rounded-2xl text-center items-center backdrop-blur-lg bg-white bg-opacity-10 p-2">
                                         <img src="../resources/technologies/node.svg" alt="c#" class="w-24 h-24 mx-auto my-auto" data-atropos-offset="-8.5"> 
                                     </div>
                                 </div>
@@ -409,7 +412,7 @@
                         <article class="atropos lang-logo tool-logo10 w-4/5 h-4/5 mx-auto mt-auto flex items-center justify-center absolute">
                             <div class="atropos-scale">
                                 <div class="atropos-rotate">
-                                    <div class="atropos-inner relative rounded-2xl text-center items-center backdrop-blur-lg bg-white bg-opacity-20 p-2">
+                                    <div class="atropos-inner relative rounded-2xl text-center items-center backdrop-blur-lg bg-white bg-opacity-10 p-2">
                                         <img src="../resources/technologies/raspberry.svg" alt="c#" class="w-24 h-24 mx-auto my-auto" data-atropos-offset="-8.5"> 
                                     </div>
                                 </div>
@@ -420,35 +423,41 @@
                 </div>
             </article>
         </section>
-        <section class="w-4/5 h-full">
-            <article class="atropos-scale atropos-mobile">
-                <div class="atropos-rotate">
-                    <div class="atropos-inner">
-                        <article class="border-4 border-indigo-50 bg-gradient-to-br from-pink-700 to-transparent rounded-2xl h-3/5 w-1/2 grid grid-rows-8">
-                            <div class="w-10/12 mx-auto row-span-1 space-x-3 row grid-cols-2">
-                                <div class="grid grid-cols-2">
-                                    <div class="">
-                                        <i class="fa fa-ellipsis text-4xl"></i>
+       <!-- Devices -->
+        <section class="w-4/5 flex items-center justify-center h-hg min-h-a142 my-16 lg:my-0">
+            <article class="atropos a-mobile h-full">
+                <div class="atropos-scale">
+                    <div class="atropos-rotate">
+                        <div class="atropos-inner ">
+                            <article class="border-4 h-full min-w-80 border-indigo-50 bg-gradient-to-br from-orange-500 to-yellow-400 dark:from-pink-700 dark:to-transparent rounded-2xl grid grid-rows-8">
+                                <div class="w-10/12 mx-auto row-span-1 space-x-3 row grid-cols-2">
+                                    <div class="grid grid-cols-2">
+                                        <div class="" data-atropos-offset="7.5">
+                                            <i class="fa fa-ellipsis text-4xl"></i>
+                                        </div>
+                                        <div class="flex items-center justify-end space-x-3" >
+                                            <i class="fa fa-caret-down text-4xl"></i>
+                                            <i class="fa fa-battery-quarter text-4xl"></i>
+                                        </div>
                                     </div>
-                                    <div class="flex items-center justify-end space-x-3">
-                                        <i class="fa fa-caret-down text-4xl"></i>
-                                        <i class="fa fa-battery-quarter text-4xl"></i>
+                                </div>  
+                                <div class="w-10/12 mx-auto row-span-5 grid place-items-center" data-atropos-offset="5.5">
+                                    <div class="rounded-2xl w-4/5 h-4/5 bg-white grid place-items-center">
+                                        <i class="fa-solid fa-rocket text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-500 dark:from-pink-500 dark:to-violet-500 transition-all duration-1000 shadow-around text-9xl" data-atropos-offset="-14.5"></i>
                                     </div>
                                 </div>
-                            </div>  
-                            <div class="w-10/12 mx-auto row-span-5 grid place-items-center">
-                                <div class="rounded-2xl w-4/5 h-4/5 bg-white grid place-items-center">
-                                    <i class="fa-solid fa-rocket text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-violet-500 transition-all duration-1000 shadow-around text-9xl"></i>
+                                <div class="w-10/12 mx-auto row-span-2 grid " data-atropos-offset="-4.5">
+                                    <div class="w-4/5 h-3/5 mx-auto rounded-lg grid place-items-center">
+                                        <p class="text-white font-extrabold text-center mx-5 mb-2" data-atropos-offset="-6.5">Visualiza tus aplicaciones en todos los dispositivos. <i class="fa-solid fa-mobile-screen"></i></p>
+                                        <a href="#section2" class="bg-blue-600 dark:bg-purple-700 text-white rounded-full px-4 py-2 md:px-8 md:py-4 font-bold md:text-xl  hover:bg-opacity-70 duration-200 ">Descubre más</a>
+
+                                        
+                                        <!-- <p class="opacity-100 mx-5 text-opacity-100">Diseños 100% responsive. <i class="fa-solid fa-pen-nib"></i></p> -->
+                                        <!-- <p class="opacity-100 mx-5 text-opacity-100">Diseño y experiencia de usuario (UI UX).<i class="fa-brands fa-sketch"></i></p> -->
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="w-10/12 mx-auto row-span-2 grid ">
-                                <div class="bg-purple-900 bg-opacity-40 w-4/5 h-3/5 mx-auto rounded-lg grid place-items-center">
-                                    <p class="opacity-100 mx-5 text-opacity-100">Visualiza tus aplicaciones en todos los dispositivos. <i class="fa-solid fa-mobile-screen"></i></p>
-                                    <!-- <p class="opacity-100 mx-5 text-opacity-100">Diseños 100% responsive. <i class="fa-solid fa-pen-nib"></i></p> -->
-                                    <!-- <p class="opacity-100 mx-5 text-opacity-100">Diseño y experiencia de usuario (UI UX).<i class="fa-brands fa-sketch"></i></p> -->
-                                </div>
-                            </div>
-                        </article>
+                            </article>
+                        </div>
                     </div>
                 </div>
             </article>

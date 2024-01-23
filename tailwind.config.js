@@ -14,18 +14,19 @@ module.exports = {
       },
       height:{
         extra: '150%',
-        
       },
       width:{
         extra: '130%',
-
-        
       },
       spacing:{
         mini: '12%',
         med: '40%',
         hg: '60%',
-        extra: '80%'
+        extra: '80%',
+        a142: '36rem',
+      },
+      fontSize:{
+        a7xl: '86px',
       }
     },
   },
