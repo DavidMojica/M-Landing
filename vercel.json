@@ -2,11 +2,19 @@
     "version": 2,
     "builds": [
       {
-        "src": "src/**/*.js",
+        "src": "src/**/*.ts",
         "use": "@vercel/node"
       }
     ],
     "routes": [
+      {
+        "src": "/favicon.ico",
+        "dest": "/public/favicon.ico"
+      },
+      {
+        "src": "/public/(.*)",
+        "dest": "/public/$1"
+      },
       {
         "handle": "filesystem"
       },
