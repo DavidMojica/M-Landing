@@ -5,23 +5,6 @@
         "src": "src/**/*.js",
         "use": "@vercel/node"
       }
-    ],
-    "routes": [
-      {
-        "src": "/favicon.png",
-        "dest": "/public/favicon.png"
-      },
-      {
-        "src": "/public/(.*)",
-        "dest": "/public/$1"
-      },
-      {
-        "handle": "filesystem"
-      },
-      {
-        "src": "/.*",
-        "dest": "/index.html"
-      }
     ]
   }
   
