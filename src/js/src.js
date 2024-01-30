@@ -207,8 +207,7 @@ const getOptionChart4 = ()=> {
             x: 'center'
         },
         legend: {
-        selectedMode: false,
-        bottom: '5%',
+        bottom: '0%',
         left: 'center'
         },
         grid,
@@ -233,15 +232,10 @@ const getOptionChart5 = ()=> {
           trigger: 'item',
           formatter: '{a} <br/>{b} : {c}%'
         },
-        toolbox: {
-          feature: {
-            dataView: { readOnly: false },
-            restore: {},
-            saveAsImage: {}
-          }
-        },
         legend: {
-          data: ['Inicio de sesión', 'Exploran el catálogo', 'Consultan detalles de un producto', 'Añaden el producto al carrito', 'Compra del producto']
+          data: ['Inicio de sesión', 'Exploran el catálogo', 'Consultan detalles de un producto', 'Añaden el producto al carrito', 'Compra del producto'],
+          bottom: '0%',
+          left: 'center'
         },
         series: [
           {
@@ -279,10 +273,10 @@ const getOptionChart5 = ()=> {
             },
             data: [
             { value: 100, name: 'Inicio de sesión' },
-              { value: 80, name: 'Exploran el catálogo' },
-              { value: 60, name: 'Consultan detalles de un producto' },
-              { value: 40, name: 'Añaden el producto al carrito' },
-              { value: 20, name: 'Compra del producto' },
+            { value: 80, name: 'Exploran el catálogo' },
+            { value: 60, name: 'Consultan detalles de un producto' },
+            { value: 40, name: 'Añaden el producto al carrito' },
+            { value: 20, name: 'Compra del producto' },
             ]
           }
         ]
