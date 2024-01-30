@@ -2,8 +2,40 @@ import {Atropos} from '../../node_modules/atropos/atropos.min.mjs';
 import {Swiper} from '../../node_modules/swiper/swiper-bundle.min.mjs';
 
 //charts
+let chart1;
 let chart2;
 //Options
+const getOptionChart1 = ()=> {
+    return {
+        xAxis: {
+            type: 'category',
+            data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+          },
+        yAxis: {
+            type: 'value'
+        },
+        series: [
+            {
+            data: [
+                120,
+                {
+                  value: 200,
+                  itemStyle: {
+                    color: '#a90000'
+                  }
+                },
+                150,
+                80,
+                70,
+                110,
+                130
+              ],
+              type: 'bar'
+            }
+        ]   
+    }
+}
+
 const getOptionChart2 = ()=> {
     return {
         title:{
@@ -56,6 +88,8 @@ const getOptionChart2 = ()=> {
 //init
 function initCharts(){
     console.time('chartsLoad');
+    chart1 = echarts.init(document.getElementById('chart1'));
+    chart1.setOption(getOptionChart1());
     chart2 = echarts.init(document.getElementById('chart2'));
     chart2.setOption(getOptionChart2());
     console.timeEnd('chartsLoad');
@@ -66,6 +100,7 @@ document.addEventListener('DOMContentLoaded', function(){
 });
 
 window.addEventListener('resize', function(){
+    chart1.resize();
     chart2.resize();
 });
 
