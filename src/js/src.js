@@ -1,6 +1,74 @@
 import {Atropos} from '../../node_modules/atropos/atropos.min.mjs';
 import {Swiper} from '../../node_modules/swiper/swiper-bundle.min.mjs';
 
+//charts
+let chart2;
+//Options
+const getOptionChart2 = ()=> {
+    return {
+        title:{
+            text:''
+        },
+        tooltip: {
+            trigger: 'item'
+        },
+        legend: {
+            top: '5%',
+            left: 'center'
+        },
+        series: [
+            {
+              name: 'Access From',
+              type: 'pie',
+              radius: ['40%', '70%'],
+              avoidLabelOverlap: false,
+              itemStyle: {
+                borderRadius: 10,
+                borderColor: '#fff',
+                borderWidth: 2
+              },
+              label: {
+                show: false,
+                position: 'center'
+              },
+              emphasis: {
+                label: {
+                  show: true,
+                  fontSize: 40,
+                  fontWeight: 'bold'
+                }
+              },
+              labelLine: {
+                show: false
+              },
+              data: [
+                { value: 1048, name: 'Search Engine' },
+                { value: 735, name: 'Direct' },
+                { value: 580, name: 'Email' },
+                { value: 484, name: 'Union Ads' },
+                { value: 300, name: 'Video Ads' }
+              ]
+            }
+        ]
+    }
+}
+
+//init
+function initCharts(){
+    console.time('chartsLoad');
+    chart2 = echarts.init(document.getElementById('chart2'));
+    chart2.setOption(getOptionChart2());
+    console.timeEnd('chartsLoad');
+}
+
+document.addEventListener('DOMContentLoaded', function(){
+    initCharts();
+});
+
+window.addEventListener('resize', function(){
+    chart2.resize();
+});
+
 // Atropos
 const nightScene =  Atropos({
     el: '.a-night',

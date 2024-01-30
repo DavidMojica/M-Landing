@@ -8,8 +8,9 @@
     <link rel="stylesheet" href="/./node_modules/@fortawesome/fontawesome-free/css/all.min.css">
     <link rel="stylesheet" href="/src/css/custom.css">
     <link rel="stylesheet" href="/src/css/imports.css">
-
     <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+    <!-- DEFER Scripts -->
     <script src="/src/js/bundle.js" defer></script>
     <script src="/src/js/src.js" defer type="module"></script>
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
@@ -472,6 +473,15 @@
             <h3 class="text-white text-5xl md:text-5xl lg:text-6xl xl:text-a7xl  mt-12">Visualización de datos</h3>
             <p class="text-white text-2xl lg:text-3xl xl:text-4xl">Lleva tu negocio al siguiente nivel con inteligencia de datos.</p>       
         </div>
+
+        <section class="grid grid-cols-12 h-96 lg:w-4/5 mx-auto mt-8 gap-2">
+            <div class="bg-white col-span-8 h-96 rounded-md ">
+
+            </div>
+            <div class="bg-white col-span-4 h-96 rounded-md ">
+                <div id="chart2" class=" h-full w-full"></div>
+            </div>
+        </section>
     </section>
 
 </body>
