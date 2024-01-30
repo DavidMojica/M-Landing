@@ -226,7 +226,8 @@ const getOptionChart4 = ()=> {
 const getOptionChart5 = ()=> {
     return {
         title: {
-          text: 'Funnel'
+          text: 'Captación general de los usuarios',
+          x: 'center'
         },
         tooltip: {
           trigger: 'item',
@@ -240,11 +241,11 @@ const getOptionChart5 = ()=> {
           }
         },
         legend: {
-          data: ['Show', 'Click', 'Visit', 'Inquiry', 'Order']
+          data: ['Inicio de sesión', 'Exploran el catálogo', 'Consultan detalles de un producto', 'Añaden el producto al carrito', 'Compra del producto']
         },
         series: [
           {
-            name: 'Funnel',
+            name: 'Captación',
             type: 'funnel',
             left: '10%',
             top: 60,
@@ -277,11 +278,11 @@ const getOptionChart5 = ()=> {
               }
             },
             data: [
-              { value: 60, name: 'Visit' },
-              { value: 40, name: 'Inquiry' },
-              { value: 20, name: 'Order' },
-              { value: 80, name: 'Click' },
-              { value: 100, name: 'Show' }
+            { value: 100, name: 'Inicio de sesión' },
+              { value: 80, name: 'Exploran el catálogo' },
+              { value: 60, name: 'Consultan detalles de un producto' },
+              { value: 40, name: 'Añaden el producto al carrito' },
+              { value: 20, name: 'Compra del producto' },
             ]
           }
         ]
