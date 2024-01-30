@@ -114,6 +114,11 @@ const getOptionChart2 = ()=> {
 //flower
 const getOptionChart3 = ()=> {
     return {
+        title:{
+            text:`Ventas totales por producto`,
+            subtext:anioActual ,
+            x: 'center'
+        },
         legend: {
           top: 'bottom'
         },
@@ -121,10 +126,10 @@ const getOptionChart3 = ()=> {
           show: true,
           feature: {
             mark: { show: true },
-            dataView: { show: true, readOnly: false },
-            restore: { show: true },
-            saveAsImage: { show: true }
           }
+        },
+        tooltip: {
+            trigger: 'item'
         },
         series: [
           {
@@ -137,14 +142,14 @@ const getOptionChart3 = ()=> {
               borderRadius: 8
             },
             data: [
-              { value: 40, name: 'rose 1' },
-              { value: 38, name: 'rose 2' },
-              { value: 32, name: 'rose 3' },
-              { value: 30, name: 'rose 4' },
-              { value: 28, name: 'rose 5' },
-              { value: 26, name: 'rose 6' },
-              { value: 22, name: 'rose 7' },
-              { value: 18, name: 'rose 8' }
+              { value: 400, name: 'Teléfonos' },
+              { value: 380, name: 'Laptops' },
+              { value: 324, name: 'Auriculares' },
+              { value: 305, name: 'Tabletas' },
+              { value: 287, name: 'Cámaras' },
+              { value: 265, name: 'Smartwatches' },
+              { value: 224, name: 'Consolas' },
+              { value: 187, name: 'Electrodomésticos' }
             ]
           }
         ]
@@ -153,33 +158,33 @@ const getOptionChart3 = ()=> {
 
 //Stacked Data
 const rawData = [
-    [100, 302, 301, 334, 390, 330, 320],
-    [320, 132, 101, 134, 90, 230, 210],
-    [220, 182, 191, 234, 290, 330, 310],
-    [150, 212, 201, 154, 190, 330, 410],
-    [820, 832, 901, 934, 1290, 1330, 1320]
+    [42, 32, 31, 20, 59, 60, 10],
+    [20, 10, 13, 14, 28, 23, 4],
+    [15, 18, 19, 23, 29, 30, 6],
+    [4, 2, 1, 3, 6, 3, 1],
+    [18, 16, 20, 24, 42, 38, 4]
   ];
-  const totalData = [];
-  for (let i = 0; i < rawData[0].length; ++i) {
-    let sum = 0;
-    for (let j = 0; j < rawData.length; ++j) {
-      sum += rawData[j][i];
-    }
-    totalData.push(sum);
-  }
-  const grid = {
-    left: 100,
-    right: 100,
-    top: 50,
-    bottom: 50
-  };
-  const series = [
-    'Direct',
-    'Mail Ad',
-    'Affiliate Ad',
-    'Video Ad',
-    'Search Engine'
-  ].map((name, sid) => {
+const totalData = [];
+for (let i = 0; i < rawData[0].length; ++i) {
+let sum = 0;
+for (let j = 0; j < rawData.length; ++j) {
+    sum += rawData[j][i];
+}
+totalData.push(sum);
+}
+const grid = {
+left: 100,
+right: 100,
+top: 50,
+bottom: 50
+};
+const series = [
+'Teléfonos',
+'Laptops',
+'Auriculares',
+'Tabletas',
+'Cámaras'
+].map((name, sid) => {
     return {
       name,
       type: 'bar',
@@ -193,11 +198,18 @@ const rawData = [
         totalData[did] <= 0 ? 0 : d / totalData[did]
       )
     };
-  });
+});
 const getOptionChart4 = ()=> {
     return {
+        title:{
+            text:`Ventas de productos por día`,
+            subtext:anioActual ,
+            x: 'center'
+        },
         legend: {
-        selectedMode: false
+        selectedMode: false,
+        bottom: '5%',
+        left: 'center'
         },
         grid,
         yAxis: {
@@ -205,7 +217,7 @@ const getOptionChart4 = ()=> {
         },
         xAxis: {
         type: 'category',
-        data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+        data: diasSemana
         },
         series
     };
