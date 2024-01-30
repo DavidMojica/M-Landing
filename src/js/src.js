@@ -1,56 +1,71 @@
 import {Atropos} from '../../node_modules/atropos/atropos.min.mjs';
 import {Swiper} from '../../node_modules/swiper/swiper-bundle.min.mjs';
 
+const anioActual = new Date().getFullYear();
+const diasSemana = ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo'];
+
 //charts
 let chart1;
 let chart2;
 //Options
+// bar
 const getOptionChart1 = ()=> {
     return {
+        title: {
+            text: 'Promedio de ventas por día',
+            subtext: anioActual,
+            x: 'center',
+        },
         xAxis: {
             type: 'category',
-            data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
-          },
+            data: diasSemana
+        },
         yAxis: {
             type: 'value'
-        },
-        series: [
-            {
-            data: [
-                120,
-                {
-                  value: 200,
-                  itemStyle: {
-                    color: '#a90000'
-                  }
-                },
-                150,
-                80,
-                70,
-                110,
-                130
-              ],
-              type: 'bar'
-            }
-        ]   
-    }
-}
-
-const getOptionChart2 = ()=> {
-    return {
-        title:{
-            text:''
         },
         tooltip: {
             trigger: 'item'
         },
+        series: [
+            {
+                data: [45, 32, 54, 72, 69, 24, 10],
+                type: 'bar',
+                showBackground: true,
+                itemStyle: {
+                    // Puedes especificar colores diferentes para cada barra aquí
+                    color: function(params) {
+                        var colorList = ['#FFC107', '#4CAF50', '#2196F3', '#FF5722', '#E91E63', '#9C27B0', '#795548'];
+                        return colorList[params.dataIndex];
+                    }
+                }
+            }
+        ]
+    };
+};
+// pie
+const getOptionChart2 = ()=> {
+    return {
+        title:{
+            text:`Ventas totales por sexo`,
+            subtext:anioActual ,
+            x: 'center'
+        },
+        tooltip: {
+            trigger: 'item',
+            formatter: '{a} <br/>{b}: {c} ({d}%)'
+        },
         legend: {
             top: '5%',
+            left: 'center',
+            data: ['Mujeres', 'Hombres']
+        },
+        legend: {
+            bottom: '5%',
             left: 'center'
         },
         series: [
             {
-              name: 'Access From',
+              name: 'Sexo',
               type: 'pie',
               radius: ['40%', '70%'],
               avoidLabelOverlap: false,
@@ -61,7 +76,8 @@ const getOptionChart2 = ()=> {
               },
               label: {
                 show: false,
-                position: 'center'
+                position: 'center',
+                formatter: '{b}: {d}%'
               },
               emphasis: {
                 label: {
@@ -74,11 +90,20 @@ const getOptionChart2 = ()=> {
                 show: false
               },
               data: [
-                { value: 1048, name: 'Search Engine' },
-                { value: 735, name: 'Direct' },
-                { value: 580, name: 'Email' },
-                { value: 484, name: 'Union Ads' },
-                { value: 300, name: 'Video Ads' }
+                {
+                    value: 2512,
+                    name: 'Mujeres',
+                    itemStyle: {
+                      color: '#F59ABE'
+                    }
+                },
+                {
+                    value: 1712,
+                    name: 'Hombres',
+                    itemStyle: {
+                      color: '#7DB4EA'
+                    }
+                }
               ]
             }
         ]
