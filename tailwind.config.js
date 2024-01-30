@@ -11,6 +11,7 @@ module.exports = {
         semidark: '#333333',
         purpleDark: '#2b1055',
         purpleDarkSecondary: '#7597de',
+        purpleVeryDark: '#100C2A',
       },
       height:{
         extra: '150%',
