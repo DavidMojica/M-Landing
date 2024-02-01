@@ -302,6 +302,8 @@ window.addEventListener('resize', function(){
     chart1.resize();
     chart2.resize();
     chart3.resize();
+    chart4.resize();
+    chart5.resize();
 });
 
 document.addEventListener('DOMContentLoaded', function(){

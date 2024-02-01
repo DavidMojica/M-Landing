@@ -600,6 +600,14 @@ video {
   grid-column: span 8 / span 8;
 }
 
+.col-span-10 {
+  grid-column: span 10 / span 10;
+}
+
+.col-span-12 {
+  grid-column: span 12 / span 12;
+}
+
 .row-span-1 {
   grid-row: span 1 / span 1;
 }
@@ -661,6 +669,10 @@ video {
   margin-bottom: 3rem;
 }
 
+.mb-16 {
+  margin-bottom: 4rem;
+}
+
 .mb-2 {
   margin-bottom: 0.5rem;
 }
@@ -689,8 +701,8 @@ video {
   margin-top: auto;
 }
 
-.mb-16 {
-  margin-bottom: 4rem;
+.mb-6 {
+  margin-bottom: 1.5rem;
 }
 
 .block {
@@ -1115,6 +1127,10 @@ video {
   background-size: 24px 24px;
 }
 
+.bg-\[size\:30px_30px\] {
+  background-size: 30px 30px;
+}
+
 .bg-clip-text {
   -webkit-background-clip: text;
           background-clip: text;
@@ -1127,6 +1143,10 @@ video {
 
 .p-2 {
   padding: 0.5rem;
+}
+
+.p-6 {
+  padding: 1.5rem;
 }
 
 .px-2 {
@@ -1386,6 +1406,20 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+:is(.dark .dark\:bg-transparent) {
+  background-color: transparent;
+}
+
+:is(.dark .dark\:bg-purpleDark) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(43 16 85 / var(--tw-bg-opacity));
+}
+
+:is(.dark .dark\:bg-purple-900) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(88 28 135 / var(--tw-bg-opacity));
+}
+
 :is(.dark .dark\:bg-gradient-to-r) {
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
 }
@@ -1491,6 +1525,14 @@ video {
     top: -3.5rem;
   }
 
+  .md\:col-span-6 {
+    grid-column: span 6 / span 6;
+  }
+
+  .md\:col-span-3 {
+    grid-column: span 3 / span 3;
+  }
+
   .md\:flex {
     display: flex;
   }
@@ -1561,9 +1603,37 @@ video {
     top: -3.5rem;
   }
 
+  .lg\:col-span-3 {
+    grid-column: span 3 / span 3;
+  }
+
+  .lg\:col-span-4 {
+    grid-column: span 4 / span 4;
+  }
+
+  .lg\:col-span-5 {
+    grid-column: span 5 / span 5;
+  }
+
+  .lg\:col-span-8 {
+    grid-column: span 8 / span 8;
+  }
+
+  .lg\:col-span-6 {
+    grid-column: span 6 / span 6;
+  }
+
+  .lg\:col-span-7 {
+    grid-column: span 7 / span 7;
+  }
+
   .lg\:my-0 {
     margin-top: 0px;
     margin-bottom: 0px;
+  }
+
+  .lg\:hidden {
+    display: none;
   }
 
   .lg\:w-4\/5 {
@@ -1611,6 +1681,26 @@ video {
 
   .xl\:col-span-1 {
     grid-column: span 1 / span 1;
+  }
+
+  .xl\:col-span-3 {
+    grid-column: span 3 / span 3;
+  }
+
+  .xl\:col-span-4 {
+    grid-column: span 4 / span 4;
+  }
+
+  .xl\:col-span-5 {
+    grid-column: span 5 / span 5;
+  }
+
+  .xl\:col-span-8 {
+    grid-column: span 8 / span 8;
+  }
+
+  .xl\:hidden {
+    display: none;
   }
 
   .xl\:w-10\/12 {
