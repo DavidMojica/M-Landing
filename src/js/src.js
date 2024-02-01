@@ -142,14 +142,14 @@ const getOptionChart3 = ()=> {
           x: 'center',
           textStyle:{
             textBorderColor: '#ffffff', 
-            textBorderWidth: 2 // Ancho del borde blanco alrededor del texto
+            textBorderWidth: 2 
           }
         },
         legend: {
           top: 'bottom',
           textStyle:{
-            textBorderColor: '#ffffff', // Borde blanco alrededor del texto
-            textBorderWidth: 2 // Ancho del borde blanco alrededor del texto
+            textBorderColor: '#ffffff', 
+            textBorderWidth: 2 
           }
         },
         toolbox: {
@@ -237,16 +237,16 @@ const getOptionChart4 = ()=> {
             x: 'center',
             top: '2%',
             textStyle:{
-              textBorderColor: '#ffffff', // Borde blanco alrededor del texto
-              textBorderWidth: 2 // Ancho del borde blanco alrededor del texto
+              textBorderColor: '#ffffff', 
+              textBorderWidth: 2 
             }
         },
         legend: {
         bottom: '0%',
         left: 'center',
         textStyle:{
-          textBorderColor: '#ffffff', // Borde blanco alrededor del texto
-          textBorderWidth: 2 // Ancho del borde blanco alrededor del texto
+          textBorderColor: '#ffffff', 
+          textBorderWidth: 2 
         }
         },
         grid,
@@ -259,8 +259,8 @@ const getOptionChart4 = ()=> {
         axisLabel: {
           textStyle: {
             color: '#fff',
-            textBorderColor: '#ffffff', // Borde blanco alrededor del texto
-            textBorderWidth: 2 // Ancho del borde blanco alrededor del texto
+            textBorderColor: '#ffffff', 
+            textBorderWidth: 2 
           }
         }
         },
@@ -271,18 +271,26 @@ const getOptionChart4 = ()=> {
 const getOptionChart5 = ()=> {
     return {
         title: {
-          text: 'Captación general de los usuarios',
+          text: 'Captación de usuarios',
           x: 'center',
           top: '2%',
+          textStyle:{
+            textBorderColor: '#ffffff', 
+            textBorderWidth: 2 
+          }
         },
         tooltip: {
           trigger: 'item',
           formatter: '{a} <br/>{b} : {c}%'
         },
         legend: {
-          data: ['Inicio de sesión', 'Exploran el catálogo', 'Consultan detalles de un producto', 'Añaden el producto al carrito', 'Compra del producto'],
+          data: ['Mostrar', 'Click', 'Visita', 'Consulta', 'Compra'],
           bottom: '0%',
-          left: 'center'
+          left: 'center',
+          textStyle:{
+            textBorderColor: '#ffffff', 
+            textBorderWidth: 2 
+          }
         },
         series: [
           {
@@ -319,11 +327,11 @@ const getOptionChart5 = ()=> {
               }
             },
             data: [
-            { value: 100, name: 'Inicio de sesión' },
-            { value: 80, name: 'Exploran el catálogo' },
-            { value: 60, name: 'Consultan detalles de un producto' },
-            { value: 40, name: 'Añaden el producto al carrito' },
-            { value: 20, name: 'Compra del producto' },
+            { value: 100, name: 'Mostrar' },
+            { value: 80, name: 'Click' },
+            { value: 60, name: 'Visita' },
+            { value: 40, name: 'Consulta' },
+            { value: 20, name: 'Compra' },
             ]
           }
         ]
