@@ -14,34 +14,46 @@ let chart5;
 // bar
 const getOptionChart1 = ()=> {
     return {
-        title: {
-            text: 'Promedio de ventas por día',
-            subtext: anioActual,
-            x: 'center',
-        },
-        xAxis: {
-            type: 'category',
-            data: diasSemana
-        },
-        yAxis: {
-            type: 'value'
-        },
-        tooltip: {
-            trigger: 'item'
-        },
-        series: [
-            {
-                data: [45, 32, 54, 72, 69, 24, 10],
-                type: 'bar',
-                showBackground: true,
-                itemStyle: {
-                    color: function(params) {
-                        var colorList = ['#FFC107', '#4CAF50', '#2196F3', '#FF5722', '#E91E63', '#9C27B0', '#795548'];
-                        return colorList[params.dataIndex];
-                    }
-                }
+      darkmode: true,
+      title: {
+          text: 'Promedio de ventas por día',
+          subtext: anioActual,
+          x: 'center',
+          top: '2%',
+          textStyle:{
+            textBorderColor: '#ffffff', 
+            textBorderWidth: 2 
+          }
+      },
+      xAxis: {
+          type: 'category',
+          data: diasSemana,
+          axisLabel: {
+            textStyle: {
+              textBorderColor: '#ffffff', 
+              textBorderWidth: 2 
             }
-        ]
+          }
+      },
+      yAxis: {
+          type: 'value'
+      },
+      tooltip: {
+          trigger: 'item'
+      },
+      series: [
+          {
+              data: [45, 32, 54, 72, 69, 24, 10],
+              type: 'bar',
+              showBackground: true,
+              itemStyle: {
+                  color: function(params) {
+                      var colorList = ['#FFC107', '#4CAF50', '#2196F3', '#FF5722', '#E91E63', '#9C27B0', '#795548'];
+                      return colorList[params.dataIndex];
+                  }
+              }
+          }
+      ]
     };
 };
 // pie
@@ -50,7 +62,12 @@ const getOptionChart2 = ()=> {
         title:{
             text:`Ventas totales por sexo`,
             subtext:anioActual ,
-            x: 'center'
+            x: 'center',
+            top: '2%',
+            textStyle:{
+              textBorderColor: '#ffffff', 
+              textBorderWidth: 2 
+            }
         },
         tooltip: {
             trigger: 'item',
@@ -63,7 +80,11 @@ const getOptionChart2 = ()=> {
         },
         legend: {
             bottom: '5%',
-            left: 'center'
+            left: 'center',
+            textStyle:{
+              textBorderColor: '#ffffff', 
+              textBorderWidth: 2 
+            }
         },
         series: [
             {
@@ -115,12 +136,21 @@ const getOptionChart2 = ()=> {
 const getOptionChart3 = ()=> {
     return {
         title:{
-            text:`Ventas totales por producto`,
-            subtext:anioActual ,
-            x: 'center'
+          top: '5%',
+          text:`Ventas totales por producto`,
+          subtext:anioActual ,
+          x: 'center',
+          textStyle:{
+            textBorderColor: '#ffffff', 
+            textBorderWidth: 2 
+          }
         },
         legend: {
-          top: 'bottom'
+          top: 'bottom',
+          textStyle:{
+            textBorderColor: '#ffffff', 
+            textBorderWidth: 2 
+          }
         },
         toolbox: {
           show: true,
@@ -204,11 +234,20 @@ const getOptionChart4 = ()=> {
         title:{
             text:`Ventas de productos por día`,
             subtext:anioActual ,
-            x: 'center'
+            x: 'center',
+            top: '2%',
+            textStyle:{
+              textBorderColor: '#ffffff', 
+              textBorderWidth: 2 
+            }
         },
         legend: {
         bottom: '0%',
-        left: 'center'
+        left: 'center',
+        textStyle:{
+          textBorderColor: '#ffffff', 
+          textBorderWidth: 2 
+        }
         },
         grid,
         yAxis: {
@@ -216,7 +255,14 @@ const getOptionChart4 = ()=> {
         },
         xAxis: {
         type: 'category',
-        data: diasSemana
+        data: diasSemana,
+        axisLabel: {
+          textStyle: {
+            color: '#fff',
+            textBorderColor: '#ffffff', 
+            textBorderWidth: 2 
+          }
+        }
         },
         series
     };
@@ -225,17 +271,26 @@ const getOptionChart4 = ()=> {
 const getOptionChart5 = ()=> {
     return {
         title: {
-          text: 'Captación general de los usuarios',
-          x: 'center'
+          text: 'Captación de usuarios',
+          x: 'center',
+          top: '2%',
+          textStyle:{
+            textBorderColor: '#ffffff', 
+            textBorderWidth: 2 
+          }
         },
         tooltip: {
           trigger: 'item',
           formatter: '{a} <br/>{b} : {c}%'
         },
         legend: {
-          data: ['Inicio de sesión', 'Exploran el catálogo', 'Consultan detalles de un producto', 'Añaden el producto al carrito', 'Compra del producto'],
+          data: ['Mostrar', 'Click', 'Visita', 'Consulta', 'Compra'],
           bottom: '0%',
-          left: 'center'
+          left: 'center',
+          textStyle:{
+            textBorderColor: '#ffffff', 
+            textBorderWidth: 2 
+          }
         },
         series: [
           {
@@ -272,11 +327,11 @@ const getOptionChart5 = ()=> {
               }
             },
             data: [
-            { value: 100, name: 'Inicio de sesión' },
-            { value: 80, name: 'Exploran el catálogo' },
-            { value: 60, name: 'Consultan detalles de un producto' },
-            { value: 40, name: 'Añaden el producto al carrito' },
-            { value: 20, name: 'Compra del producto' },
+            { value: 100, name: 'Mostrar' },
+            { value: 80, name: 'Click' },
+            { value: 60, name: 'Visita' },
+            { value: 40, name: 'Consulta' },
+            { value: 20, name: 'Compra' },
             ]
           }
         ]
@@ -302,6 +357,8 @@ window.addEventListener('resize', function(){
     chart1.resize();
     chart2.resize();
     chart3.resize();
+    chart4.resize();
+    chart5.resize();
 });
 
 document.addEventListener('DOMContentLoaded', function(){
